@@ -45,9 +45,9 @@
 .character-section {
   display: flex;
   width: 100%;
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 24px;
   margin: 60px 0;
 }
 
