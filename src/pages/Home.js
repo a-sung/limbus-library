@@ -3,8 +3,17 @@ import Header from "components/Header";
 import Filter from "components/Filter";
 import Character from "components/Character";
 import {names, resistances, rarities, affinities, effects} from "data/filters";
+import {characters} from "data/characters";
+import {useEffect, useState} from "react";
 
 function Home() {
+  const [results, setResults] = useState();
+  useEffect(() => {
+    characters.then((appData) => {
+      setResults(() => appData);
+    });
+  },[])
+
   return (
       <div className="body">
         <Header />
@@ -16,7 +25,7 @@ function Home() {
           <Filter items={effects} category={"스킬 효과"} />
         </section>
         <section className="character-section">
-          <Character />
+          {results ? results.map(character => <Character key={character.code} character={character} />) : null}
         </section>
       </div>
   );

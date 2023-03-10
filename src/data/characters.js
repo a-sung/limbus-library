@@ -14,14 +14,19 @@ async function getCharacters() {
 
   let items = parsed.table.rows
       .map(({ c }) => cleanRow(c))
-      .map(([rarity, name, identity, health, speed, defense, buff, deBuff, slash, pierce, blunt, wrath, lust, sloth, gluttony, gloom, pride, envy]) => ({
+      .map(([code, rarity, name, identity, health, speed, defense, buff, deBuff, slash, pierce, blunt, fir_type, fir_affinity, sec_type, sec_affinity, thi_type, thi_affinity ]) => ({
+        code,
         rarity,
         name,
         identity,
         status:{health, speed, defense},
-        skill:{buff, deBuff},
+        effect:{buff, deBuff},
         resistances: {slash, pierce, blunt},
-        affinities: {wrath, lust, sloth, gluttony, gloom, pride, envy},
+        skills: [
+          {type: fir_type, affinity: fir_affinity},
+          {type: sec_type, affinity: sec_affinity},
+          {type: thi_type, affinity: thi_affinity},
+        ],
       }));
 
   return items

@@ -1,9 +1,9 @@
-function Character() {
+function Character({character}) {
   return (
       <div className="character-wrap">
-        <div>이름</div>
+        <div>{character.identity} {character.name}</div>
         <div className="character-image">
-          <img src=""/>
+          <img src={`/images/characters/${character.code}.png`} alt={`${character.identity} ${character.name}`}/>
         </div>
         <div className="character-table-wrap">
           <div>
@@ -18,9 +18,9 @@ function Character() {
               </thead>
               <tbody>
                 <tr>
-                  <td>138</td>
-                  <td>4-8</td>
-                  <td>10</td>
+                  <td>{character.status.health}</td>
+                  <td>{character.status.speed}</td>
+                  <td>{character.status.defense}</td>
                 </tr>
               </tbody>
             </table>
@@ -35,9 +35,9 @@ function Character() {
               </thead>
               <tbody>
                 <tr>
-                  <td>내성</td>
-                  <td>보통</td>
-                  <td>취약</td>
+                  <td>{character.resistances.slash}</td>
+                  <td>{character.resistances.pierce}</td>
+                  <td>{character.resistances.blunt}</td>
                 </tr>
               </tbody>
             </table>
@@ -52,14 +52,14 @@ function Character() {
           </thead>
           <tbody>
             <tr>
-              <td>관통</td>
-              <td>타격</td>
-              <td>관통</td>
+              <td>{character.skills[0].type}</td>
+              <td>{character.skills[1].type}</td>
+              <td>{character.skills[2].type}</td>
             </tr>
             <tr>
-              <td>분노</td>
-              <td>탐식</td>
-              <td>오만</td>
+              <td>{character.skills[0].affinity}</td>
+              <td>{character.skills[1].affinity}</td>
+              <td>{character.skills[2].affinity}</td>
             </tr>
           </tbody>
         </table>
