@@ -2,7 +2,7 @@ import "styles.css";
 import Header from "components/Header";
 import Filter from "components/Filter";
 import Character from "components/Character";
-import {names, rarities, affinities, effects, attacks} from "data/filters";
+import {names, affinities, attacks} from "data/filters";
 import {useEffect, useState} from "react";
 import {useRecoilState} from "recoil";
 import {FilterState} from "store/filterState";
@@ -57,10 +57,8 @@ function Home() {
         <Header />
         <section className="filter-section">
           <Filter items={names} name={"캐릭터"} category={"character"}/>
-          {/*<Filter items={rarities} name={"희귀도"} category={"rarity"}/>*/}
           <Filter items={attacks} name={"공격 타입"} category={"attack"}/>
           <Filter items={affinities} name={"보유 죄악"} category={"affinity"}/>
-          {/*<Filter items={effects} name={"스킬 효과"} category={"effect"} />*/}
         </section>
         <section className="character-section">
           {results ? results.map(character => <Character key={character.code} character={character} />) : null}
