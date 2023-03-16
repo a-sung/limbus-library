@@ -1,10 +1,12 @@
 
 export const characters = getCharacters();
 
-async function getCharacters() {
+export async function getCharacters() {
   const sheetId = process.env.REACT_APP_SHEET_ID;
   const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
   const sheetName = process.env.REACT_APP_SHEET_SINNER;
+  // const query = encodeURIComponent("select * where (C='이상' or C='파우스트') and J='타격'")
+  // const query = generateQuery(cond);
   const query = encodeURIComponent('Select *')
   const url = `${base}&sheet=${sheetName}&tq=${query}`
 
@@ -31,6 +33,15 @@ async function getCharacters() {
 
   return items
 }
+
+function generateQuery(cond) {
+  let queryString = 'select *';
+  console.log(cond);
+  let items = '';
+  // cond.character.map(item => items+' '+item)
+  return encodeURIComponent(queryString);
+}
+
 function cleanRow(row) {
   function replaceNull(item) {
     if (item == null) {
