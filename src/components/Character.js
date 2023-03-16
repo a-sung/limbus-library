@@ -1,19 +1,32 @@
 function Character({character}) {
   return (
       <div className="character-wrap">
-        <div>{character.identity} {character.name}</div>
+        <h1 className="character-name">{character.identity} {character.name}</h1>
         <div className="character-image">
           <img src={`/images/characters/${character.code}.png`} alt={`${character.identity} ${character.name}`}/>
         </div>
         <div className="character-table-wrap">
           <div>
+            {/* status table */}
             <table className="character-table">
               <caption>스테이터스</caption>
               <thead>
                 <tr>
-                  <th>체력</th>
-                  <th>속도</th>
-                  <th>방어</th>
+                  <th>
+                    <div className="character-icon">
+                      <img src={`/images/icons/hp.webp`} alt="체력" title="체력" />
+                    </div>
+                  </th>
+                  <th>
+                    <div className="character-icon">
+                      <img src={`/images/icons/speed.webp`} alt="속도" title="속도" />
+                    </div>
+                  </th>
+                  <th>
+                    <div className="character-icon">
+                      <img src={`/images/icons/defense.webp`} alt="방어 레벨" title="방어 레벨" />
+                    </div>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -24,13 +37,26 @@ function Character({character}) {
                 </tr>
               </tbody>
             </table>
+            {/* resistance table */}
             <table className="character-table">
               <caption>내성 정보</caption>
               <thead>
                 <tr>
-                  <th>참격</th>
-                  <th>관통</th>
-                  <th>타격</th>
+                  <th>
+                    <div className="character-icon">
+                      <img src={`/images/icons/참격.webp`} alt="참격" title="참격" />
+                    </div>
+                  </th>
+                  <th>
+                    <div className="character-icon">
+                      <img src={`/images/icons/관통.webp`} alt="관통" title="관통" />
+                    </div>
+                  </th>
+                  <th>
+                    <div className="character-icon">
+                      <img src={`/images/icons/타격.webp`} alt="타격" title="타격" />
+                    </div>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -42,7 +68,9 @@ function Character({character}) {
               </tbody>
             </table>
           </div>
-        <table className="character-table">
+        {/* skill table */}
+        <table className="character-table skill">
+          <caption>스킬 정보</caption>
           <thead>
             <tr>
               <th>스킬1</th>
@@ -51,16 +79,18 @@ function Character({character}) {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>{character.skills[0].type}</td>
-              <td>{character.skills[1].type}</td>
-              <td>{character.skills[2].type}</td>
-            </tr>
-            <tr>
-              <td>{character.skills[0].affinity}</td>
-              <td>{character.skills[1].affinity}</td>
-              <td>{character.skills[2].affinity}</td>
-            </tr>
+          <tr>
+            {character.skills.map((skill, idx) => (
+                <td key={idx}>
+                  <div className="character-icon skill">
+                    <img src={`/images/icons/${skill.type}.webp`} alt={skill.type} title={skill.type}/>
+                  </div>
+                  <div className="character-icon skill">
+                    <img src={`/images/icons/${skill.affinity}.webp`} alt={skill.affinity} title={skill.affinity}/>
+                  </div>
+                </td>
+            ))}
+          </tr>
           </tbody>
         </table>
         </div>

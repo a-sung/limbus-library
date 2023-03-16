@@ -5,9 +5,9 @@ function Filter(props) {
         <form name={props.category} >
           {props.items.map(item => (
               <span className="filter-item" key={item}>
-            <input type="checkbox" />
-            <label>{item}</label>
-          </span>
+               <input type="checkbox" label={item} id={item} />
+               <label for={item}>{item}</label>
+              </span>
           ))}
         </form>
       </div>

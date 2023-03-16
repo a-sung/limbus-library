@@ -20,7 +20,7 @@ function Home() {
         <section className="filter-section">
           <Filter items={names} category={"캐릭터"}/>
           <Filter items={rarities} category={"희귀도"}/>
-          <Filter items={resistances} category={"내성"}/>
+          <Filter items={resistances} category={"공격 타입"}/>
           <Filter items={affinities} category={"보유 죄악"} />
           <Filter items={effects} category={"스킬 효과"} />
         </section>

@@ -19,27 +19,54 @@
   font-family: 'S-CoreDream-3Light', sans-serif;
   font-weight: bold;
   font-size: 2rem;
+  color: #FFC96F;
 }
 
+/* filters */
 .filter-section {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding: 24px 20px;
+  border: 2px solid #996633;
+  font-family: 'S-CoreDream-3Light';
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .filter-wrap form {
-  border: 1px solid black;
-  padding: 8px;
   display: flex;
-  gap: 12px;
+  gap: 3px;
   flex-wrap: wrap;
 }
 
 .filter-title {
   font-weight: bold;
+  background-color: #996633;
+  color: #E9C9A3;
+  display: inline-block;
+  margin: 8px 0;
+  padding: 0 24px 0 8px;
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
 }
+
 .filter-item input {
-  margin-right: 2px;
+  display: none;
+}
+
+.filter-item label {
+  background-color: #E9C9A3;
+  -webkit-box-shadow: inset 2px 4px 6px -1px rgba(65,56,45,0.6);
+  box-shadow: inset 2px 4px 6px -1px rgba(65,56,45,0.6);
+  color: #120804;
+  border: 2px solid rgba(65,56,45);
+  padding: 2px 12px;
+}
+
+.filter-item input[type="checkbox"]:checked + label {
+  color: #E9C9A3;
+  background: #120804;
+  border: 2px solid #FEC53F;
 }
 
 .character-section {
@@ -47,13 +74,17 @@
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 40px 28px;
   margin: 60px 0;
 }
 
+/* character */
 .character-wrap {
-  border: 1px solid black;
-  padding: 8px;
+  border: 1px solid #996633;
+  padding: 12px 16px 24px 16px;
+  background-color: #120804;
+  color: #E3C290;
+  font-size: 0.9rem;
 }
 
 .character-image {
@@ -86,15 +117,58 @@
 }
 
 .character-table {
-  border: 1px solid black;
+  table-layout: fixed;
 }
 
-.character-table caption {
-  border: 1px solid black;
-}
-
-.character-table th, td {
-  /*border: 1px solid black;*/
+.character-table th,
+.character-table td {
   padding: 0 8px;
   text-align: center;
+  box-sizing: border-box;
+  background-color: #3C2716;
+}
+
+.character-table th {
+  padding-top: 6px;
+}
+
+.character-table td {
+  padding-bottom: 4px;
+}
+
+.character-icon {
+  display: inline-block;
+  width: 24px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.character-icon img {
+  height: 22px;
+}
+
+.character-icon.skill {
+  vertical-align: middle;
+}
+
+.character-image,
+.character-table,
+.character-table caption {
+  border: 1px solid #644024;
+}
+
+.character-table.skill th,
+.character-table.skill td {
+  border-right: 1px solid #644024;
+}
+
+.character-name,
+.character-table caption {
+  color: #FFC96F;
+  font-weight: bold;
+  font-family: 'S-CoreDream-3Light', sans-serif;
+}
+
+.character-name {
+  margin-bottom: 8px;
 }
