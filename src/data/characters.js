@@ -1,7 +1,7 @@
 
 export const characters = getCharacters();
 
-async function getCharacters() {
+export async function getCharacters() {
   const sheetId = process.env.REACT_APP_SHEET_ID;
   const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
   const sheetName = process.env.REACT_APP_SHEET_SINNER;
@@ -31,6 +31,7 @@ async function getCharacters() {
 
   return items
 }
+
 function cleanRow(row) {
   function replaceNull(item) {
     if (item == null) {
