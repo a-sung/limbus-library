@@ -73,23 +73,42 @@ function Character({character}) {
           <caption>스킬 정보</caption>
           <thead>
             <tr>
+              <th />
               <th>스킬1</th>
               <th>스킬2</th>
-              <th>스킬2</th>
+              <th>스킬3</th>
+              <th>수비</th>
             </tr>
           </thead>
           <tbody>
           <tr>
+            <td>공격 유형</td>
             {character.skills.map((skill, idx) => (
                 <td key={idx}>
                   <div className="character-icon skill">
                     <img src={`/images/icons/${skill.type}.webp`} alt={skill.type} title={skill.type}/>
                   </div>
+                </td>
+            ))}
+            <td>{character.defense.type}</td>
+          </tr>
+          <tr>
+            <td>죄악 속성</td>
+            {character.skills.map((skill, idx) => (
+                <td key={idx}>
                   <div className="character-icon skill">
                     <img src={`/images/icons/${skill.affinity}.webp`} alt={skill.affinity} title={skill.affinity}/>
                   </div>
                 </td>
             ))}
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>위력<div>(스킬/코인)</div></td>
+            {character.skills.map((skill, idx) => (
+                <td key={idx}>{skill.power}</td>
+            ))}
+            <td>{character.defense.power}</td>
           </tr>
           </tbody>
         </table>
