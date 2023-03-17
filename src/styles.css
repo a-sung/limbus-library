@@ -157,6 +157,10 @@
   border: 1px solid #644024;
 }
 
+.character-table.skill tr {
+  border-bottom: 1px solid #644024;
+}
+
 .character-table.skill th,
 .character-table.skill td {
   border-right: 1px solid #644024;
