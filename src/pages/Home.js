@@ -1,6 +1,6 @@
 import "styles.css";
 import Header from "components/Header/Header";
-import Filter from "components/Filter";
+import Filter from "components/Filter/Filter";
 import Character from "components/Character";
 import {names, affinities, attacks} from "data/filters";
 import {useEffect, useState} from "react";

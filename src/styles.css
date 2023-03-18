@@ -23,41 +23,7 @@
   font-size: 0.9rem;
 }
 
-.filter-wrap form {
-  display: flex;
-  gap: 3px;
-  flex-wrap: wrap;
-}
-
-.filter-title {
-  font-weight: bold;
-  background-color: #996633;
-  color: #E9C9A3;
-  display: inline-block;
-  margin: 8px 0;
-  padding: 0 24px 0 8px;
-  clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
-}
-
-.filter-item input {
-  display: none;
-}
-
-.filter-item label {
-  background-color: #E9C9A3;
-  -webkit-box-shadow: inset 2px 4px 6px -1px rgba(65,56,45,0.6);
-  box-shadow: inset 2px 4px 6px -1px rgba(65,56,45,0.6);
-  color: #120804;
-  border: 2px solid rgba(65,56,45);
-  padding: 2px 12px;
-}
-
-.filter-item input[type="checkbox"]:checked + label {
-  color: #E9C9A3;
-  background: #120804;
-  border: 2px solid #FEC53F;
-}
-
+/* character */
 .character-section {
   display: flex;
   width: 100%;
@@ -67,7 +33,6 @@
   margin: 60px 0;
 }
 
-/* character */
 .character-wrap {
   border: 1px solid #996633;
   padding: 12px 16px 24px 16px;
