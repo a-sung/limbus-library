@@ -11,17 +11,6 @@
   align-items: center;
 }
 
-.header-section {
-  padding: 40px 0;
-}
-
-.header-section h1 {
-  font-family: 'S-CoreDream-3Light', sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-  color: #FFC96F;
-}
-
 /* filters */
 .filter-section {
   display: flex;
@@ -29,7 +18,7 @@
   gap: 12px;
   padding: 24px 20px;
   border: 2px solid #996633;
-  font-family: 'S-CoreDream-3Light';
+  font-family: 'S-CoreDream-3Light', sans-serif;
   font-weight: bold;
   font-size: 0.9rem;
 }
