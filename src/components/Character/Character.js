@@ -1,22 +1,23 @@
+import * as S from "./styles";
 import Status from "./Status/Status";
 import Resistances from "./Resistances/Resistances";
 import Skills from "./Skills/Skills";
 
 function Character({character}) {
   return (
-      <div className="character-wrap">
-        <h1 className="character-name">{character.identity} {character.name}</h1>
-        <div className="character-image">
+      <S.Container>
+        <S.NameText>{character.identity} {character.name}</S.NameText>
+        <S.CharacterImage>
           <img src={`/images/characters/${character.code}.png`} alt={`${character.identity} ${character.name}`}/>
-        </div>
-        <div className="character-table-wrap">
-          <div>
+        </S.CharacterImage>
+        <S.TablesWrap>
+          <div className="tmp">
             <Status />
             <Resistances />
           </div>
-        <Skills />
-        </div>
-      </div>
+          <Skills />
+        </S.TablesWrap>
+      </S.Container>
   );
 }
 
