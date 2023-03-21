@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const Container = styled.div`
   min-width: 400px;
@@ -7,6 +7,13 @@ export const Container = styled.div`
   background-color: #120804;
   color: #E3C290;
   font-size: 0.9rem;
+  position: relative;
+`;
+
+export const Information = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const CharacterImage = styled.div`
@@ -42,7 +49,7 @@ export const TablesWrap = styled.div`
 `;
 
 export const Table = styled.table`
-  ${(props) => (props.width ? props.width : "100%")};
+  width: ${(props) => (props.width ? props.width : "100%")};
   border: 1px solid #644024;
   margin-top: 12px;
   > caption {
@@ -61,11 +68,14 @@ export const Table = styled.table`
 `;
 
 export const Icon = styled.div`
-  width: 24px;
+  width: ${(props) => (props.width ? props.width : "24px")};
   display: inline-block;
   vertical-align: middle;
   text-align: center;
   > img {
     height: 22px;
   }
+  ${props => props.rarity && css`
+      margin-bottom: 8px;
+    `}
 `;
