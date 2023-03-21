@@ -25,6 +25,7 @@ export const CoinPowerText = styled.div`
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
   font-size: 1rem;
   padding: 0 2px;
+  margin-top: 4px;
 `;
 
 export const IconsWrap = styled.div`
