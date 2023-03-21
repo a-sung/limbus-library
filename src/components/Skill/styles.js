@@ -39,6 +39,7 @@ export const NameText = styled.div`
   font-family: 'S-CoreDream-3Light', sans-serif;
   font-weight: bold;
   text-shadow: 1px 1px black;
+  word-spacing: -2px;
 `;
 
 export const IconsWrap = styled.div`
