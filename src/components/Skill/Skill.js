@@ -1,4 +1,6 @@
 import * as S from "./styles";
+import {useEffect, useState} from "react";
+import SkillEffect from "../SkillEffect/SkillEffect";
 
 function Skill({skill}) {
   const colorTable = {
@@ -12,8 +14,15 @@ function Skill({skill}) {
     "-": ["#996633", "#120804"],
   }
 
+  const [isHover, setIsHover] = useState(false);
+  const [hasEffect, setHasEffect] = useState(false);
+
+  useEffect(() => {
+    if (skill.desc) setHasEffect(() => true);
+  }, [])
+
   return (
-      <S.SkillContainer>
+      <S.SkillContainer onMouseOver={() => setIsHover(true)} onMouseOut={() => setIsHover(false)} hover={hasEffect}>
         <S.CoinPowerText color={colorTable[skill.affinity][0]}>{skill.power.coin}</S.CoinPowerText>
         <S.SkillFrame color={colorTable[skill.affinity][1]}>
           <S.SkillFrame width={"51px"} height={"48px"}>
@@ -34,10 +43,11 @@ function Skill({skill}) {
         </S.IconsWrap>
         <S.NameText color={colorTable[skill.affinity][0]}>{skill.name}</S.NameText>
         <S.CoinsWrap>
-          {[...Array(parseInt(skill.power.count))].map((idx) => (
+          {[...Array(parseInt(skill.power.count))].map((n, idx) => (
               <S.CoinIcon key={idx}><img src={`/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
           ))}
         </S.CoinsWrap>
+        {isHover? <SkillEffect effect={skill.desc} /> : null}
       </S.SkillContainer>
 
   );

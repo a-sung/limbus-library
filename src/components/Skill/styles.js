@@ -1,9 +1,16 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const SkillContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  ${props => props.hover && css`
+    &:hover {
+      border-radius: 4px;
+      background-color: rgba(18, 8, 4, 0.4);
+      cursor: pointer;
+    }
+    `}
 `;
 
 export const SkillFrame = styled.div`
