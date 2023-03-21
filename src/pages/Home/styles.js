@@ -1,18 +1,12 @@
-@font-face {
-  font-family: 'S-CoreDream-3Light';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+import styled from "styled-components";
 
-.body {
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+`;
 
-/* filters */
-.filter-section {
+export const FilterSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -21,14 +15,13 @@
   font-family: 'S-CoreDream-3Light', sans-serif;
   font-weight: bold;
   font-size: 0.9rem;
-}
+`;
 
-/* character */
-.character-section {
+export const CharacterSection = styled.section`
   display: flex;
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px 28px;
   margin: 60px 0;
-}
+`;
