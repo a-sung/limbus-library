@@ -1,7 +1,7 @@
-import "styles.css";
-import Header from "components/Header";
-import Filter from "components/Filter";
-import Character from "components/Character";
+import * as S from "./styles";
+import Header from "components/Header/Header";
+import Filter from "components/Filter/Filter";
+import Character from "components/Character/Character";
 import {names, affinities, attacks} from "data/filters";
 import {useEffect, useState} from "react";
 import {useRecoilState} from "recoil";
@@ -53,17 +53,17 @@ function Home() {
   },[filters])
 
   return (
-      <div className="body">
+      <S.Container>
         <Header />
-        <section className="filter-section">
+        <S.FilterSection>
           <Filter items={names} name={"캐릭터"} category={"character"}/>
           <Filter items={attacks} name={"공격 타입"} category={"attack"}/>
           <Filter items={affinities} name={"보유 죄악"} category={"affinity"}/>
-        </section>
-        <section className="character-section">
+        </S.FilterSection>
+        <S.CharacterSection>
           {results ? results.map(character => <Character key={character.code} character={character} />) : null}
-        </section>
-      </div>
+        </S.CharacterSection>
+      </S.Container>
   );
 }
 

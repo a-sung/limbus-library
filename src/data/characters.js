@@ -14,7 +14,8 @@ export async function getCharacters() {
 
   let items = parsed.table.rows
       .map(({ c }) => cleanRow(c))
-      .map(([code, rarity, name, identity, health, speed, defense, slash, pierce, blunt, fir_type, fir_aff, fir_pow, sec_type, sec_aff, sec_pow, thi_type, thi_aff, thi_pow, def_type, def_pow]) => ({
+      .map(([code, rarity, name, identity, health, speed, defense, slash, pierce, blunt,
+              fir_name, fir_type, fir_aff, fir_pow, sec_name, sec_type, sec_aff, sec_pow, thi_name, thi_type, thi_aff, thi_pow, def_type, def_pow]) => ({
         code,
         rarity,
         name,
@@ -22,9 +23,9 @@ export async function getCharacters() {
         status:{health, speed, defense},
         resistances: {slash, pierce, blunt},
         skills: [
-          {type: fir_type, affinity: fir_aff, power: fir_pow},
-          {type: sec_type, affinity: sec_aff, power: sec_pow},
-          {type: thi_type, affinity: thi_aff, power: thi_pow},
+          {name: fir_name, type: fir_type, affinity: fir_aff, power: fir_pow},
+          {name: sec_name, type: sec_type, affinity: sec_aff, power: sec_pow},
+          {name: thi_name, type: thi_type, affinity: thi_aff, power: thi_pow},
         ],
         defense: {type: def_type, power: def_pow},
       }));

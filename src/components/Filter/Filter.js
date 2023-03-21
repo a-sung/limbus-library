@@ -1,5 +1,6 @@
 import {useRecoilState} from "recoil";
 import {FilterState} from "store/filterState";
+import * as S from "./styles";
 
 function Filter(props) {
   const [filters, setFilters] = useRecoilState(FilterState);
@@ -18,16 +19,16 @@ function Filter(props) {
   }
 
   return (
-      <div className="filter-wrap">
-        <div className="filter-title">{props.name}</div>
-        <form name={props.category} >
+      <div>
+        <S.FilterTitle>{props.name}</S.FilterTitle>
+        <S.LabelWrap name={props.category}>
           {props.items.map(item => (
-              <span className="filter-item" key={item} onClick={(e) => handleFilterItems(e)}>
-               <input type="checkbox" label={item} id={item} />
-               <label for={item}>{item}</label>
+              <span key={item} onClick={(e) => handleFilterItems(e)}>
+               <S.Checkbox label={item} id={item} />
+               <S.Label htmlFor={item}>{item}</S.Label>
               </span>
           ))}
-        </form>
+        </S.LabelWrap>
       </div>
   );
 }
