@@ -18,7 +18,9 @@ export async function getCharacters() {
               fir_name, fir_type, fir_aff, fir_pow, fir_desc,
               sec_name, sec_type, sec_aff, sec_pow, sec_desc,
               thi_name, thi_type, thi_aff, thi_pow, thi_desc,
-              def_type, def_pow, def_aff, def_desc]) => ({
+              def_type, def_pow, def_aff, def_desc,
+              passive_name, passive_aff, passive_cnt, passive_desc,
+              support_name, support_aff, support_cnt, support_desc]) => ({
         code,
         rarity,
         name,
@@ -31,7 +33,10 @@ export async function getCharacters() {
           {name: thi_name, type: thi_type, affinity: thi_aff, power: {count: thi_pow.split('/')[0], skill: thi_pow.split('/')[1], coin: thi_pow.split('/')[2]}, desc: thi_desc},
           {name: def_type, type: def_type, affinity: def_aff, power: {count: def_pow.split('/')[0], skill: def_pow.split('/')[1], coin: def_pow.split('/')[2]}, desc: def_desc}
         ],
-        defense: {name: def_type, type: def_type, affinity: def_aff, power: def_pow},
+        passives: [
+          {name: passive_name, affinity: passive_aff, count: passive_cnt, desc: passive_desc},
+          {name: support_name, affinity: support_aff, count: support_cnt, desc: support_desc},
+        ]
       }));
 
   return items

@@ -7,7 +7,6 @@ export const Container = styled.div`
   background-color: #120804;
   color: #E3C290;
   font-size: 0.9rem;
-  position: relative;
 `;
 
 export const Information = styled.div`
@@ -42,16 +41,35 @@ export const NameText = styled.h1`
 `;
 
 export const TablesWrap = styled.div`
-  > div:first-child {
+  > div {
     display: flex;
     justify-content: space-between;
   }
+`;
+
+export const PassivesWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    border-radius: 4px;
+    background-color: rgba(18, 8, 4, 0.4);
+    cursor: pointer;
+  }
+`;
+
+export const PassiveText = styled.div`
+  font-weight: bold;
+  font-family: 'S-CoreDream-3Light', sans-serif;
+  margin-left: 4px;
+  word-spacing: -2px;
 `;
 
 export const Table = styled.table`
   width: ${(props) => (props.width ? props.width : "100%")};
   border: 1px solid #644024;
   margin-top: 12px;
+  position: relative;
   > caption {
     font-family: 'S-CoreDream-3Light', sans-serif;
     font-weight: bold;
@@ -68,10 +86,9 @@ export const Table = styled.table`
 `;
 
 export const Icon = styled.div`
-  width: ${(props) => (props.width ? props.width : "24px")};
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   > img {
     height: 22px;
   }

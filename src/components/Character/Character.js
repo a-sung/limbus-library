@@ -2,6 +2,7 @@ import * as S from "./styles";
 import Status from "./Status/Status";
 import Resistances from "./Resistances/Resistances";
 import Skills from "./Skills/Skills";
+import Passive from "./Passive/Passive";
 
 function Character({character}) {
   return (
@@ -16,11 +17,13 @@ function Character({character}) {
           <img src={`/images/characters/${character.code}.png`} alt={`${character.identity} ${character.name}`}/>
         </S.CharacterImage>
         <S.TablesWrap>
-          <div className="tmp">
+          <div>
             <Status status={character.status} />
             <Resistances resistances={character.resistances} />
           </div>
           <Skills skills={character.skills} />
+          <Passive caption="패시브" passive={character.passives[0]} />
+          <Passive caption="서포트 패시브" passive={character.passives[1]} />
         </S.TablesWrap>
       </S.Container>
   );
