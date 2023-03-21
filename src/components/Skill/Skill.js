@@ -11,28 +11,33 @@ function Skill({skill}) {
     "질투": ["#6A4979", "#B903B7"],
     "-": ["#996633", "#120804"],
   }
+
   return (
       <S.SkillContainer>
-        <S.CoinPowerText color={colorTable[skill.affinity][0]}>{skill.power.split('/')[1]}</S.CoinPowerText>
-        <S.SkillIcon color={colorTable[skill.affinity][1]}>
-          <S.SkillIcon width={"51px"} height={"48px"}>
-            <S.SkillIcon width={"48px"} height={"46px"} color={colorTable[skill.affinity][0]}>
-              <S.SkillIcon width={"44px"} height={"42px"}>
-               <S.SkillIcon width={"40px"} height={"38px"} color={colorTable[skill.affinity][0]}>
-                 <S.SkillIcon width={"38px"} height={"36px"}>
-                    <S.SkillPowerText>{skill.power.split('/')[0]}</S.SkillPowerText>
-                  </S.SkillIcon>
-                </S.SkillIcon>
-              </S.SkillIcon>
-            </S.SkillIcon>
-          </S.SkillIcon>
-        </S.SkillIcon>
+        <S.CoinPowerText color={colorTable[skill.affinity][0]}>{skill.power.coin}</S.CoinPowerText>
+        <S.SkillFrame color={colorTable[skill.affinity][1]}>
+          <S.SkillFrame width={"51px"} height={"48px"}>
+            <S.SkillFrame width={"48px"} height={"46px"} color={colorTable[skill.affinity][0]}>
+              <S.SkillFrame width={"44px"} height={"42px"}>
+               <S.SkillFrame width={"40px"} height={"38px"} color={colorTable[skill.affinity][0]}>
+                 <S.SkillFrame width={"38px"} height={"36px"}>
+                    <S.SkillPowerText>{skill.power.skill}</S.SkillPowerText>
+                  </S.SkillFrame>
+                </S.SkillFrame>
+              </S.SkillFrame>
+            </S.SkillFrame>
+          </S.SkillFrame>
+        </S.SkillFrame>
         <S.IconsWrap>
-          <S.Icon><img src={`/images/icons/${skill.type}.webp`} /></S.Icon >
-          {skill.affinity === '-' ? null : <S.Icon><img src={`/images/icons/${skill.affinity}.webp`} /></S.Icon>}
+          <S.Icon><img src={`/images/icons/${skill.type}.webp`} alt={skill.type}/></S.Icon >
+          {skill.affinity === '-' ? null : <S.Icon><img src={`/images/icons/${skill.affinity}.webp`} alt={skill.affinity}/></S.Icon>}
         </S.IconsWrap>
-        <S.SkillNameText color={colorTable[skill.affinity][0]}>{skill.name}</S.SkillNameText>
-
+        <S.NameText color={colorTable[skill.affinity][0]}>{skill.name}</S.NameText>
+        <S.CoinsWrap>
+          {[...Array(parseInt(skill.power.count))].map((idx) => (
+              <S.CoinIcon key={idx}><img src={`/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
+          ))}
+        </S.CoinsWrap>
       </S.SkillContainer>
 
   );
