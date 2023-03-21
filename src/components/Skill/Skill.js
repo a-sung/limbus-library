@@ -9,6 +9,7 @@ function Skill({skill}) {
     "우울": ["#3E9CB0", "#01FEFD"],
     "오만": ["#305E84", "#11CFD9"],
     "질투": ["#6A4979", "#B903B7"],
+    "-": ["#996633", "#120804"],
   }
   return (
       <S.SkillContainer>
@@ -28,7 +29,7 @@ function Skill({skill}) {
         </S.SkillIcon>
         <S.IconsWrap>
           <S.Icon><img src={`/images/icons/${skill.type}.webp`} /></S.Icon >
-          <S.Icon><img src={`/images/icons/${skill.affinity}.webp`} /></S.Icon>
+          {skill.affinity === '-' ? null : <S.Icon><img src={`/images/icons/${skill.affinity}.webp`} /></S.Icon>}
         </S.IconsWrap>
         <S.SkillNameText color={colorTable[skill.affinity][0]}>{skill.name}</S.SkillNameText>
 
