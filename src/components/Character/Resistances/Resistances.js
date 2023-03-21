@@ -1,6 +1,6 @@
 import * as S from "../styles";
 
-function Resistances() {
+function Resistances({resistances}) {
   return(
       <S.Table width="53%">
         <caption>내성 정보</caption>
@@ -19,9 +19,9 @@ function Resistances() {
         </thead>
         <tbody>
         <tr>
-          <td>내성</td>
-          <td>내성</td>
-          <td>내성</td>
+          <td>{resistances.slash}</td>
+          <td>{resistances.pierce}</td>
+          <td>{resistances.blunt}</td>
         </tr>
         </tbody>
       </S.Table>

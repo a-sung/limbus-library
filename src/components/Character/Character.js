@@ -12,10 +12,10 @@ function Character({character}) {
         </S.CharacterImage>
         <S.TablesWrap>
           <div className="tmp">
-            <Status />
-            <Resistances />
+            <Status status={character.status} />
+            <Resistances resistances={character.resistances} />
           </div>
-          <Skills />
+          <Skills skills={character.skills} />
         </S.TablesWrap>
       </S.Container>
   );

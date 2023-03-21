@@ -1,8 +1,8 @@
 import * as S from "../styles";
 
-function Status() {
+function Status({status}) {
   return(
-      <S.Table width="38%">
+      <S.Table width="44%">
         <caption>스테이터스</caption>
         <thead>
           <tr>
@@ -19,9 +19,9 @@ function Status() {
         </thead>
         <tbody>
           <tr>
-            <td>132</td>
-            <td>139</td>
-            <td>32</td>
+            <td>{status.health}</td>
+            <td>{status.speed}</td>
+            <td>{status.defense}</td>
           </tr>
         </tbody>
       </S.Table>

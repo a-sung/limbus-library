@@ -1,25 +1,17 @@
 import * as S from "../styles";
 import Skill from "components/Skill/Skill";
 
-function Skills() {
+function Skills({skills}) {
   return(
-      <S.Table>
+      <S.Table width="100%">
         <caption>스킬 정보</caption>
-        <thead>
-          <tr>
-            <th>스킬1</th>
-            <th>스킬2</th>
-            <th>스킬3</th>
-            <th>수비</th>
-          </tr>
-        </thead>
         <tbody>
-          <tr>
-            <td><Skill /></td>
-            <td><Skill /></td>
-            <td><Skill /></td>
-            <td><Skill /></td>
-          </tr>
+        <tr>
+          <td><Skill skill={skills[0]}/></td>
+          <td><Skill skill={skills[1]}/></td>
+          <td><Skill skill={skills[2]}/></td>
+          <td><Skill skill={skills[0]}/></td>
+        </tr>
         </tbody>
       </S.Table>
   )

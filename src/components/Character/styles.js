@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  min-width: 400px;
   border: 1px solid #996633;
   padding: 12px 16px 24px 16px;
   background-color: #120804;
@@ -11,8 +12,9 @@ export const Container = styled.div`
 export const CharacterImage = styled.div`
   position: relative;
   width: 100%;
-  height: 0;
-  padding-bottom: 50%;
+  //height: 0;
+  //padding-bottom: 50%;
+  height: 157px;
   overflow: hidden;
   border: 1px solid #644024;
   > img {
@@ -21,6 +23,7 @@ export const CharacterImage = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 `;
 
