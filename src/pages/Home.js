@@ -1,7 +1,7 @@
 import "styles.css";
 import Header from "components/Header/Header";
 import Filter from "components/Filter/Filter";
-import Character from "components/Character";
+import Character from "components/Character/Character";
 import {names, affinities, attacks} from "data/filters";
 import {useEffect, useState} from "react";
 import {useRecoilState} from "recoil";
