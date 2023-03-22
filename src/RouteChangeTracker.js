@@ -16,7 +16,6 @@ const RouteChangeTracker = () => {
     if (initialized) {
       // ReactGA.send({ hitType: 'pageview', page: location.pathname });
       ReactGA.pageview(location.pathname + location.search);
-      console.log('ga');
     }
   }, [initialized, location]);
 };
