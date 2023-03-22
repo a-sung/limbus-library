@@ -7,13 +7,13 @@ function Resistances({resistances}) {
         <thead>
         <tr>
           <th>
-            <S.Icon><img src={`/images/icons/참격.webp`} alt="참격" title="참격" /></S.Icon>
+            <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/참격.webp`} alt="참격" title="참격" /></S.Icon>
           </th>
           <th>
-            <S.Icon><img src={`/images/icons/관통.webp`} alt="관통" title="관통" /></S.Icon>
+            <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/관통.webp`} alt="관통" title="관통" /></S.Icon>
           </th>
           <th>
-            <S.Icon><img src={`/images/icons/타격.webp`} alt="타격" title="타격" /></S.Icon>
+            <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/타격.webp`} alt="타격" title="타격" /></S.Icon>
           </th>
         </tr>
         </thead>
