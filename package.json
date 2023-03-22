@@ -24,6 +24,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://a-sung.github.io/limbus-library/",
   "eslintConfig": {
     "extends": [
       "react-app",
