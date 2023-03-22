@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/limbus-library/static/js/main.749b20cd.js",
+    "main.js": "/limbus-library/static/js/main.db96ea58.js",
     "static/js/787.321d14df.chunk.js": "/limbus-library/static/js/787.321d14df.chunk.js",
     "index.html": "/limbus-library/index.html",
-    "main.749b20cd.js.map": "/limbus-library/static/js/main.749b20cd.js.map",
+    "main.db96ea58.js.map": "/limbus-library/static/js/main.db96ea58.js.map",
     "787.321d14df.chunk.js.map": "/limbus-library/static/js/787.321d14df.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.749b20cd.js"
+    "static/js/main.db96ea58.js"
   ]
 }
