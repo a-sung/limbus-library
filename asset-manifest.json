@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/static/js/main.a02e3373.js",
-    "static/js/787.321d14df.chunk.js": "/static/js/787.321d14df.chunk.js",
-    "index.html": "/index.html",
-    "main.a02e3373.js.map": "/static/js/main.a02e3373.js.map",
-    "787.321d14df.chunk.js.map": "/static/js/787.321d14df.chunk.js.map"
+    "main.js": "/limbus-library/static/js/main.6bbb3cd1.js",
+    "static/js/787.321d14df.chunk.js": "/limbus-library/static/js/787.321d14df.chunk.js",
+    "index.html": "/limbus-library/index.html",
+    "main.6bbb3cd1.js.map": "/limbus-library/static/js/main.6bbb3cd1.js.map",
+    "787.321d14df.chunk.js.map": "/limbus-library/static/js/787.321d14df.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.a02e3373.js"
+    "static/js/main.6bbb3cd1.js"
   ]
 }
