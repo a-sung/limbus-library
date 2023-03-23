@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
+    "react-ga4": "^2.1.0",
     "react-router": "^6.8.2",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
@@ -24,6 +26,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://a-sung.github.io/limbus-library/",
   "eslintConfig": {
     "extends": [
       "react-app",
