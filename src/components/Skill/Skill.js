@@ -64,8 +64,8 @@ function Skill({skill}) {
                 <S.CoinIcon key={idx}><img src={`${process.env.PUBLIC_URL}/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
             ))}
           </S.CoinsWrap>
-          {isHover ? <SkillEffect effect={skill.desc} /> : null}
         </S.SkillContainer>
+        {isHover ? <SkillEffect effect={skill.desc} /> : null}
       </div>
   );
 }
