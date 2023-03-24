@@ -18,8 +18,12 @@ function Passive({caption, passive}) {
             </S.PassivesWrap>
           </td>
         </tr>
+        <tr>
+          <td>
+            {isHover? <SkillEffect effect={passive.desc} support/> : null}
+          </td>
+        </tr>
         </tbody>
-        {isHover? <SkillEffect effect={passive.desc} support/> : null}
       </S.Table>
   )
 }
