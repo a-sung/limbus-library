@@ -28,7 +28,7 @@ function Skill({skill}) {
     }
   }
 
-  const touchSkillIcon = (e) => {
+  const touchSkillIcon = () => {
     setIsHover(!isHover);
     isHover? setIsPreventHover(true) : setIsPreventHover(false);
   }
@@ -38,7 +38,7 @@ function Skill({skill}) {
         <S.SkillContainer
             onMouseOver={mouseOverSkillIcon}
             onMouseOut={() => setIsHover(false)}
-            onTouchEnd={(e) => touchSkillIcon(e)}
+            onTouchEnd={touchSkillIcon}
             hover={hasEffect && isHover}>
           <S.CoinPowerText color={colorTable[skill.affinity][0]}>{skill.power.coin}</S.CoinPowerText>
           <S.SkillFrame color={colorTable[skill.affinity][1]}>
