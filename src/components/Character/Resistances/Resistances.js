@@ -2,7 +2,7 @@ import * as S from "../styles";
 
 function Resistances({resistances}) {
   return(
-      <S.Table width="53%">
+      <S.Table width="49%">
         <caption>내성 정보</caption>
         <thead>
         <tr>

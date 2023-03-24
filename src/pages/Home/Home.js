@@ -57,7 +57,7 @@ function Home() {
         <Header />
         <S.FilterSection>
           <Filter items={names} name={"캐릭터"} category={"character"}/>
-          <Filter items={attacks} name={"공격 타입"} category={"attack"}/>
+          <Filter items={attacks} name={"공격 유형"} category={"attack"}/>
           <Filter items={affinities} name={"보유 죄악"} category={"affinity"}/>
         </S.FilterSection>
         <S.CharacterSection>
