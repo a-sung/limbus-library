@@ -22,7 +22,7 @@ function Character({character}) {
                   </S.Icon>}
         </S.Information>
         <S.CharacterImage>
-          <img src={`${process.env.PUBLIC_URL}/images/characters/${character.code}.png`} alt={`${character.identity} ${character.name}`}/>
+          <img src={`${process.env.PUBLIC_URL}/images/characters/${character.code}.webp`} alt={`${character.identity} ${character.name}`} loading={"lazy"}/>
         </S.CharacterImage>
         <S.TablesWrap>
           <div>
