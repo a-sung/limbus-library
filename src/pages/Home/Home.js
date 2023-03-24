@@ -22,7 +22,6 @@ function Home() {
 
   useEffect (() => {
     let filterResults = items;
-
     if (filters.character.length > 0) {
       filterResults = items.filter(item => {
         return filters.character.some(cond => {
@@ -30,7 +29,6 @@ function Home() {
         })
       })
     }
-
     if (filters.affinity.length > 0 ) {
       filterResults = filterResults.filter(item => {
         return filters.affinity.every(cond => {
@@ -38,7 +36,6 @@ function Home() {
         })
       })
     }
-
     if (filters.attack.length > 0) {
       filterResults = filterResults.filter(item => {
         return filters.attack.every(cond => {
@@ -46,10 +43,7 @@ function Home() {
         })
       })
     }
-
     setResults(() => filterResults);
-
-
   },[filters])
 
   return (
@@ -57,8 +51,8 @@ function Home() {
         <Header />
         <S.FilterSection>
           <Filter items={names} name={"캐릭터"} category={"character"}/>
-          <Filter items={attacks} name={"공격 유형"} category={"attack"}/>
-          <Filter items={affinities} name={"보유 죄악"} category={"affinity"}/>
+          <Filter items={attacks} name={"유형"} category={"attack"}/>
+          <Filter items={affinities} name={"속성"} category={"affinity"}/>
         </S.FilterSection>
         <S.CharacterSection>
           {results ? results.map(character => <Character key={character.code} character={character} />) : null}
