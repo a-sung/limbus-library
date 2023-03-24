@@ -77,7 +77,7 @@ export const Table = styled.table`
     border: 1px solid #644024;
     padding: 2px;
   }
-  th, td {
+  tr, th, td {
     padding: 4px 8px;
     text-align: center;
     box-sizing: border-box;
