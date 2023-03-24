@@ -22,34 +22,35 @@ function Skill({skill}) {
   }, [])
 
   return (
-      <S.SkillContainer onMouseOver={() => setIsHover(true)} onMouseOut={() => setIsHover(false)} hover={hasEffect}>
-        <S.CoinPowerText color={colorTable[skill.affinity][0]}>{skill.power.coin}</S.CoinPowerText>
-        <S.SkillFrame color={colorTable[skill.affinity][1]}>
-          <S.SkillFrame width={"51px"} height={"48px"}>
-            <S.SkillFrame width={"48px"} height={"46px"} color={colorTable[skill.affinity][0]}>
-              <S.SkillFrame width={"44px"} height={"42px"}>
-               <S.SkillFrame width={"40px"} height={"38px"} color={colorTable[skill.affinity][0]}>
-                 <S.SkillFrame width={"38px"} height={"36px"}>
-                    <S.SkillPowerText>{skill.power.skill}</S.SkillPowerText>
+      <div>
+        <S.SkillContainer onMouseOver={() => setIsHover(true)} onMouseOut={() => setIsHover(false)} hover={hasEffect}>
+          <S.CoinPowerText color={colorTable[skill.affinity][0]}>{skill.power.coin}</S.CoinPowerText>
+          <S.SkillFrame color={colorTable[skill.affinity][1]}>
+            <S.SkillFrame width={"51px"} height={"48px"}>
+              <S.SkillFrame width={"48px"} height={"46px"} color={colorTable[skill.affinity][0]}>
+                <S.SkillFrame width={"44px"} height={"42px"}>
+                  <S.SkillFrame width={"40px"} height={"38px"} color={colorTable[skill.affinity][0]}>
+                    <S.SkillFrame width={"38px"} height={"36px"}>
+                      <S.SkillPowerText>{skill.power.skill}</S.SkillPowerText>
+                    </S.SkillFrame>
                   </S.SkillFrame>
                 </S.SkillFrame>
               </S.SkillFrame>
             </S.SkillFrame>
           </S.SkillFrame>
-        </S.SkillFrame>
-        <S.IconsWrap>
-          <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${skill.type}.webp`} alt={skill.type}/></S.Icon >
-          {skill.affinity === '-' ? null : <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${skill.affinity}.webp`} alt={skill.affinity}/></S.Icon>}
-        </S.IconsWrap>
-        <S.NameText color={colorTable[skill.affinity][0]}>{skill.name}</S.NameText>
-        <S.CoinsWrap>
-          {[...Array(parseInt(skill.power.count))].map((n, idx) => (
-              <S.CoinIcon key={idx}><img src={`${process.env.PUBLIC_URL}/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
-          ))}
-        </S.CoinsWrap>
-        {isHover? <SkillEffect effect={skill.desc} /> : null}
-      </S.SkillContainer>
-
+          <S.IconsWrap>
+            <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${skill.type}.webp`} alt={skill.type}/></S.Icon >
+            {skill.affinity === '-' ? null : <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${skill.affinity}.webp`} alt={skill.affinity}/></S.Icon>}
+          </S.IconsWrap>
+          <S.NameText color={colorTable[skill.affinity][0]}>{skill.name}</S.NameText>
+          <S.CoinsWrap>
+            {[...Array(parseInt(skill.power.count))].map((n, idx) => (
+                <S.CoinIcon key={idx}><img src={`${process.env.PUBLIC_URL}/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
+            ))}
+          </S.CoinsWrap>
+          {isHover? <SkillEffect effect={skill.desc} /> : null}
+        </S.SkillContainer>
+      </div>
   );
 }
 
