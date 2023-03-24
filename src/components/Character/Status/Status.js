@@ -2,7 +2,7 @@ import * as S from "../styles";
 
 function Status({status}) {
   return(
-      <S.Table width="44%">
+      <S.Table width="49%">
         <caption>스테이터스</caption>
         <thead>
           <tr>
