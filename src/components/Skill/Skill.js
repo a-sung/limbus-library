@@ -15,15 +15,31 @@ function Skill({skill}) {
   }
 
   const [isHover, setIsHover] = useState(false);
+  const [isPreventHover, setIsPreventHover] = useState(false); // 모바일 mouseover 이벤트 막기
   const [hasEffect, setHasEffect] = useState(false);
 
   useEffect(() => {
     if (skill.desc) setHasEffect(() => true);
   }, [])
 
+  const mouseOverSkillIcon = () => {
+    if (!isPreventHover) {
+      setIsHover(true);
+    }
+  }
+
+  const touchSkillIcon = (e) => {
+    setIsHover(!isHover);
+    isHover? setIsPreventHover(true) : setIsPreventHover(false);
+  }
+
   return (
       <div>
-        <S.SkillContainer onMouseOver={() => setIsHover(true)} onMouseOut={() => setIsHover(false)} hover={hasEffect}>
+        <S.SkillContainer
+            onMouseOver={mouseOverSkillIcon}
+            onMouseOut={() => setIsHover(false)}
+            onTouchEnd={(e) => touchSkillIcon(e)}
+            hover={hasEffect && isHover}>
           <S.CoinPowerText color={colorTable[skill.affinity][0]}>{skill.power.coin}</S.CoinPowerText>
           <S.SkillFrame color={colorTable[skill.affinity][1]}>
             <S.SkillFrame width={"51px"} height={"48px"}>
@@ -48,7 +64,7 @@ function Skill({skill}) {
                 <S.CoinIcon key={idx}><img src={`${process.env.PUBLIC_URL}/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
             ))}
           </S.CoinsWrap>
-          {isHover? <SkillEffect effect={skill.desc} /> : null}
+          {isHover ? <SkillEffect effect={skill.desc} /> : null}
         </S.SkillContainer>
       </div>
   );
