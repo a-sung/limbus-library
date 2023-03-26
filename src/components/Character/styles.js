@@ -36,7 +36,7 @@ export const CharacterImage = styled.div`
 export const NameText = styled.h1`
   color: #FFC96F;
   font-weight: bold;
-  font-family: 'S-CoreDream-3Light', sans-serif;
+  font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
   margin-bottom: 8px;
 `;
 
@@ -61,7 +61,7 @@ export const PassivesWrap = styled.div`
 
 export const PassiveText = styled.div`
   font-weight: bold;
-  font-family: 'S-CoreDream-3Light', sans-serif;
+  font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
   margin-left: 4px;
   word-spacing: -2px;
 `;
@@ -72,7 +72,7 @@ export const Table = styled.table`
   margin-top: 12px;
   position: relative;
   > caption {
-    font-family: 'S-CoreDream-3Light', sans-serif;
+    font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
     font-weight: bold;
     color: #FFC96F;
     border: 1px solid #644024;

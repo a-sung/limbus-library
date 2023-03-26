@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0030-0039;
   }
   
   body {
