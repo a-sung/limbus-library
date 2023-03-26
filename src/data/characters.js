@@ -1,10 +1,12 @@
-
 export const characters = getCharacters();
 
 export async function getCharacters() {
+  let language = localStorage.getItem("language") ;
+  language =  language ? language : 'ko';
+
   const sheetId = process.env.REACT_APP_SHEET_ID;
   const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-  const sheetName = process.env.REACT_APP_SHEET_SINNER;
+  const sheetName = `${process.env.REACT_APP_SHEET_SINNER}${language}`;
   const query = encodeURIComponent('Select *')
   const url = `${base}&sheet=${sheetName}&tq=${query}`
 

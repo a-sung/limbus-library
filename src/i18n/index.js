@@ -17,7 +17,7 @@ i18n
       debug: true, // TODO: 배포 시 삭제
       defaultNS: "translation",
       ns: "translation",
-      keySeparator: false,
+      // keySeparator: false,
       interpolation: {
         escapeValue: false,
       },
