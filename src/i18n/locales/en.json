@@ -38,7 +38,7 @@
   },
   "types": {
     "slash": "Slash",
-    "pierce": "Perce",
+    "pierce": "Pierce",
     "blunt": "Blunt"
   },
   "affinities": {
@@ -58,9 +58,9 @@
     "5": "Sinking",
     "6": "Poise",
     "7": "Charge",
-    "8": "마비",
-    "9": "취약",
-    "10": "속박",
-    "11": "신속"
+    "8": "Paralyze",
+    "9": "Fragile",
+    "10": "Bind",
+    "11": "Haste"
   }
 }
