@@ -1,0 +1,66 @@
+{
+  "captions": {
+    "status": "Status",
+    "resistances": "Resistances",
+    "skills": "Skills",
+    "passive": "Passive",
+    "support": "Support"
+  },
+  "resistances": {
+    "ineff": "Ineff.",
+    "normal": "Normal",
+    "fatal": "Fatal"
+  },
+  "defense": {
+    "guard": "Guard",
+    "evade": "Evade",
+    "counter": "Counter"
+  },
+  "filters": {
+    "name": "Character",
+    "type": "Type",
+    "affinity": "Affinity",
+    "keyword": "Keyword"
+  },
+  "characters": {
+    "1": "Yi Sang",
+    "2": "Faust",
+    "3": "Don Quixote",
+    "4": "Ryōshū",
+    "5": "Meursault",
+    "6": "Hong Lu",
+    "7": "Heathcliff",
+    "8": "Ishmael",
+    "9": "Rodion",
+    "10": "Emil Sinclair",
+    "11": "Outis",
+    "12": "Gregor"
+  },
+  "types": {
+    "slash": "Slash",
+    "pierce": "Perce",
+    "blunt": "Blunt"
+  },
+  "affinities": {
+    "wrath": "Wrath",
+    "lust": "Lust",
+    "sloth": "Sloth",
+    "gluttony": "Glut.",
+    "gloom": "Gloom",
+    "pride": "Pride",
+    "envy": "Envy"
+  },
+  "keywords": {
+    "1": "Burn",
+    "2": "Bleed",
+    "3": "Tremor",
+    "4": "Rupture",
+    "5": "Sinking",
+    "6": "Poise",
+    "7": "Charge",
+    "8": "마비",
+    "9": "취약",
+    "10": "속박",
+    "11": "신속"
+  }
+}
