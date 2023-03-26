@@ -48,7 +48,9 @@ function Home() {
     if (filters.keywords.length > 0) {
       filterResults = filterResults.filter(item => {
         return filters.keywords.every(cond => {
-          return item.keywords.includes(String(cond));
+          return item.skills[0].desc[i18n.language].includes(t(`keywords.${cond}`))
+              || item.skills[1].desc[i18n.language].includes(t(`keywords.${cond}`))
+              || item.skills[2].desc[i18n.language].includes(t(`keywords.${cond}`))
         })
       })
     }
