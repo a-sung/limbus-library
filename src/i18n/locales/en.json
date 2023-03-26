@@ -23,18 +23,18 @@
     "keyword": "Keyword"
   },
   "characters": {
-    "1": "Yi Sang",
-    "2": "Faust",
-    "3": "Don Quixote",
-    "4": "Ryōshū",
-    "5": "Meursault",
-    "6": "Hong Lu",
-    "7": "Heathcliff",
-    "8": "Ishmael",
-    "9": "Rodion",
-    "10": "Emil Sinclair",
-    "11": "Outis",
-    "12": "Gregor"
+    "yisang": "Yi Sang",
+    "faust": "Faust",
+    "donquixote": "Don Quixote",
+    "ryoshu": "Ryōshū",
+    "meursault": "Meursault",
+    "honglu": "Hong Lu",
+    "heathcliff": "Heathcliff",
+    "ishmael": "Ishmael",
+    "rodion": "Rodion",
+    "sinclair": "Emil Sinclair",
+    "outis": "Outis",
+    "gregor": "Gregor"
   },
   "types": {
     "slash": "Slash",

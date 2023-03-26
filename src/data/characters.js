@@ -16,6 +16,7 @@ export async function getCharacters() {
       .map(([code, rarity, name, identity_ko, identity_jp, identity_en,
               health, speed, defense,
               slash, pierce, blunt,
+              keywords,
               fir_name_ko, fir_name_jp, fir_name_en, fir_type, fir_aff, fir_pow, fir_desc_ko, fir_desc_jp, fir_desc_en,
               sec_name_ko, sec_name_jp, sec_name_en, sec_type, sec_aff, sec_pow, sec_desc_ko, sec_desc_jp, sec_desc_en,
               thi_name_ko, thi_name_jp, thi_name_en, thi_type, thi_aff, thi_pow, thi_desc_ko, thi_desc_jp, thi_desc_en,
@@ -32,6 +33,7 @@ export async function getCharacters() {
         },
         status:{health, speed, defense},
         resistances: {slash, pierce, blunt},
+        keywords,
         skills: [
           {
             name: {ko:fir_name_ko, jp: fir_name_jp, en:fir_name_en},
