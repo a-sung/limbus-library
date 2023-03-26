@@ -51,6 +51,7 @@ export const PassivesWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 8px;
   &:hover {
     border-radius: 4px;
     background-color: rgba(18, 8, 4, 0.4);
@@ -75,7 +76,7 @@ export const Table = styled.table`
     font-weight: bold;
     color: #FFC96F;
     border: 1px solid #644024;
-    padding: 2px;
+    padding: 4px 2px;
   }
   tr, th, td {
     padding: 4px 8px;
