@@ -1,8 +1,10 @@
 import * as S from "./styles";
 import {useEffect, useState} from "react";
 import SkillEffect from "../SkillEffect/SkillEffect";
+import {useTranslation} from "react-i18next";
 
-function Skill({skill}) {
+function Skill({skill, defense=false}) {
+  const { t, i18n } = useTranslation();
   const colorTable = {
     "-": ["#996633", "#120804"],
     "wrath": ["#913326", "#D31917"],
@@ -62,14 +64,14 @@ function Skill({skill}) {
             </S.Icon >
             {skill.affinity === '-' ? null : <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${skill.affinity}.webp`} alt={skill.affinity}/></S.Icon>}
           </S.IconsWrap>
-          <S.NameText color={colorTable[skill.affinity][0]}>{skill.name}</S.NameText>
+          <S.NameText color={colorTable[skill.affinity][0]}>{defense? t(`defense.${skill.name}`):skill.name[i18n.language]}</S.NameText>
           <S.CoinsWrap>
             {[...Array(parseInt(skill.power.count))].map((n, idx) => (
                 <S.CoinIcon key={idx}><img src={`${process.env.PUBLIC_URL}/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
             ))}
           </S.CoinsWrap>
         </S.SkillContainer>
-        {isHover ? <SkillEffect effect={skill.desc} /> : null}
+        {isHover ? <SkillEffect effect={skill.desc[i18n.language]} /> : null}
       </div>
   );
 }

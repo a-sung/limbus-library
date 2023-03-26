@@ -4,8 +4,7 @@ import {useTranslation} from "react-i18next";
 function Header() {
   const { t, i18n } = useTranslation();
 
-  const changeLanguage = () => {
-    const language = i18n.language === 'ko' ? 'jp' : 'ko';
+  const changeLanguage = (language) => {
     i18n.changeLanguage(language)
     localStorage.setItem("language", i18n.language);
   }
@@ -15,7 +14,12 @@ function Header() {
         <header>
           <S.Title>Limbus Company 도감</S.Title>
         </header>
-        <button onClick={changeLanguage}>{i18n.language}</button>
+        <div>
+          <button onClick={() => changeLanguage('ko')}>KO/</button>
+          <button onClick={() => changeLanguage('jp')}>JP/</button>
+          <button onClick={() => changeLanguage('en')}>EN</button>
+        </div>
+
       </S.Container>
   );
 }

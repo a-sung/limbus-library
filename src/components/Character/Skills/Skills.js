@@ -12,7 +12,7 @@ function Skills({skills}) {
           <td><Skill skill={skills[0]}/></td>
           <td><Skill skill={skills[1]}/></td>
           <td><Skill skill={skills[2]}/></td>
-          <td><Skill skill={skills[3]}/></td>
+          <td><Skill skill={skills[3]} defense={true}/></td>
         </tr>
         </tbody>
       </S.Table>
