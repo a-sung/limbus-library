@@ -5,9 +5,9 @@ import Header from "components/Header/Header";
 import Filter from "components/Filter/Filter";
 import Character from "components/Character/Character";
 import {FilterState} from "store/filterState";
-import {characters, getCharacters} from "data/characters";
-
+import {characters} from "data/characters";
 import { useTranslation } from "react-i18next";
+import {names, affinities, keywords, types} from "data/filters";
 
 function Home() {
   const { t, i18n } = useTranslation();
@@ -22,21 +22,12 @@ function Home() {
     });
   }, []);
 
-  useEffect(() => {
-    // TODO: 데이터 불러오는 동안 로딩 아이콘 표시
-    const newItems = getCharacters(i18n.language);
-    newItems.then((appData) => {
-      setItems(() => appData);
-      setResults(() => appData);
-    });
-  }, [i18n.language]);
-
   useEffect (() => {
     let filterResults = items;
     if (filters.characters.length > 0) {
       filterResults = items.filter(item => {
         return filters.characters.some(cond => {
-          return item.name === cond;
+          return String(item.name) === cond;
         })
       })
     }
@@ -64,17 +55,14 @@ function Home() {
     setResults(() => filterResults);
   },[filters, i18n.language]);
 
-
-
-
   return (
       <S.Container>
         <Header />
         <S.FilterSection>
-          <Filter items={t('filter.name.items', { returnObjects: true })} name={t('filter.name.name')} category={"characters"}/>
-          <Filter items={t('filter.type.items', { returnObjects: true })} name={t('filter.type.name')} category={"types"}/>
-          <Filter items={t('filter.affinity.items', { returnObjects: true })} name={t('filter.affinity.name')} category={"affinities"}/>
-          <Filter items={t('filter.keyword.items', { returnObjects: true })} name={t('filter.keyword.name')} category={"keywords"}/>
+          <Filter items={names} name={t('filters.name')} category={"characters"}/>
+          <Filter items={types} name={t('filters.type')} category={"types"}/>
+          <Filter items={affinities} name={t('filters.affinity')} category={"affinities"}/>
+          <Filter items={keywords} name={t('filters.keyword')} category={"keywords"}/>
         </S.FilterSection>
         <S.CharacterSection>
           {results ? results.map(character => <Character key={character.code} character={character} />) : null}

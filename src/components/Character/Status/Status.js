@@ -1,9 +1,11 @@
 import * as S from "../styles";
+import {useTranslation} from "react-i18next";
 
 function Status({status}) {
+  const { t } = useTranslation();
   return(
       <S.Table width="49%">
-        <caption>스테이터스</caption>
+        <caption>{t(`captions.status`)}</caption>
         <thead>
           <tr>
             <th>

@@ -1,10 +1,12 @@
 import * as S from "../styles";
 import Skill from "components/Skill/Skill";
+import {useTranslation} from "react-i18next";
 
 function Skills({skills}) {
+  const { t } = useTranslation();
   return(
       <S.Table width="100%">
-        <caption>스킬 정보</caption>
+        <caption>{t(`captions.skills`)}</caption>
         <tbody>
         <tr>
           <td><Skill skill={skills[0]}/></td>
