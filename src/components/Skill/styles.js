@@ -25,7 +25,7 @@ export const SkillFrame = styled.div`
 `;
 
 export const SkillPowerText = styled.div`
-  font-family: 'S-CoreDream-3Light', sans-serif;
+  font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
 `;
@@ -43,7 +43,7 @@ export const NameText = styled.div`
   padding: 2px 8px;
   background-color: ${(props) => (props.color ? props.color : "black")};
   box-shadow: -2px 3px black;
-  font-family: 'S-CoreDream-3Light', sans-serif;
+  font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold;
   text-shadow: 1px 1px black;
   word-spacing: -2px;
