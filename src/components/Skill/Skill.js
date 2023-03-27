@@ -71,7 +71,7 @@ function Skill({skill, defense=false}) {
             ))}
           </S.CoinsWrap>
         </S.SkillContainer>
-        {isHover ? <SkillEffect effect={skill.desc[i18n.language]} /> : null}
+        {isHover ? <SkillEffect name={skill.name[i18n.language]} effect={skill.desc[i18n.language]} /> : null}
       </div>
   );
 }

@@ -78,8 +78,12 @@ export const Table = styled.table`
     border: 1px solid #644024;
     padding: 4px 2px;
   }
-  tr, th, td {
-    padding: 4px 8px;
+  tr {
+    background-color: #3C2716;
+  }
+  th, td {
+    max-width: 97px;
+    padding: 4px;
     text-align: center;
     box-sizing: border-box;
     background-color: #3C2716;
