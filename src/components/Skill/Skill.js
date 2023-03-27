@@ -64,14 +64,14 @@ function Skill({skill, defense=false}) {
             </S.Icon >
             {skill.affinity === '-' ? null : <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${skill.affinity}.webp`} alt={skill.affinity}/></S.Icon>}
           </S.IconsWrap>
-          <S.NameText color={colorTable[skill.affinity][0]}>{defense? t(`defense.${skill.name}`):skill.name[i18n.language]}</S.NameText>
+          <S.NameText color={colorTable[skill.affinity][0]}>{defense?t(`defense.${skill.name}`):skill.name[i18n.language]}</S.NameText>
           <S.CoinsWrap>
             {[...Array(parseInt(skill.power.count))].map((n, idx) => (
                 <S.CoinIcon key={idx}><img src={`${process.env.PUBLIC_URL}/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
             ))}
           </S.CoinsWrap>
         </S.SkillContainer>
-        {isHover ? <SkillEffect name={skill.name[i18n.language]} effect={skill.desc[i18n.language]} /> : null}
+        {isHover ? <SkillEffect name={defense?t(`defense.${skill.name}`):skill.name[i18n.language]} effect={skill.desc[i18n.language]} /> : null}
       </div>
   );
 }
