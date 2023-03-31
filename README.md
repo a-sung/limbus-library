@@ -7,12 +7,15 @@ Library of Limbus Componay
 
 ## Release history
 
-최신 버전: v.1.1.0
+최신 버전: v.1.2.0
 
-최종 업데이트: 23.03.24
+최종 업데이트: 23.03.31
 
 <details>
 <summary>업데이트 내역</summary>
+
+- v.1.2.0
+  - 일본어, 영어 지원
 
 - v.1.1.0
   - 스킬 키워드 11종 필터 추가
