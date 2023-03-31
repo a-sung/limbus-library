@@ -16,7 +16,6 @@ i18n
       resources,
       lng: "en",
       fallbackLng: 'en',
-      debug: true, // TODO: 배포 시 삭제
       defaultNS: "translation",
       ns: "translation",
       interpolation: {
