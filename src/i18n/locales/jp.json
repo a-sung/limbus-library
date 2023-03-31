@@ -1,0 +1,66 @@
+{
+  "captions": {
+    "status": "ステータス",
+    "resistances": "耐性情報",
+    "skills": "スキル",
+    "passive": "パッシブ",
+    "support": "サポートパッシブ"
+  },
+  "resistances": {
+    "ineff": "耐性",
+    "normal": "普通",
+    "fatal": "脆弱"
+  },
+  "defense": {
+    "guard": "ガード",
+    "evade": "回避",
+    "counter": "反撃"
+  },
+  "filters": {
+    "name": "キャラクター",
+    "type": "タイプ",
+    "affinity": "屬性",
+    "keyword": "スキルキーワード"
+  },
+  "characters": {
+    "yisang": "イサン",
+    "faust": "ファウスト",
+    "donquixote": "ンキホーテ",
+    "ryoshu": "良秀",
+    "meursault": "ムルソー",
+    "honglu": "ホンル",
+    "heathcliff": "ヒースクリフ",
+    "ishmael": "イシュメール",
+    "rodion": "ロージャ",
+    "sinclair": "シンクレア",
+    "outis": "ウーティス",
+    "gregor": "グレゴール"
+  },
+  "types": {
+    "slash": "斬撃",
+    "pierce": "貫通",
+    "blunt": "打撃"
+  },
+  "affinities": {
+    "wrath": "憤怒",
+    "lust": "色欲",
+    "sloth": "怠惰",
+    "gluttony": "暴食",
+    "gloom": "憂鬱",
+    "pride": "傲慢",
+    "envy": "嫉妬"
+  },
+  "keywords": {
+    "1": "火傷",
+    "2": "出血",
+    "3": "振動",
+    "4": "破裂",
+    "5": "沈潛",
+    "6": "呼吸",
+    "7": "充電",
+    "8": "마비",
+    "9": "취약",
+    "10": "속박",
+    "11": "신속"
+  }
+}

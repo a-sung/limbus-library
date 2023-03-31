@@ -1,8 +1,11 @@
 import * as S from "../styles"
 import {useState} from "react";
 import SkillEffect from "components/SkillEffect/SkillEffect";
+import {useTranslation} from "react-i18next";
 
 function Passive({caption, passive}) {
+  const { t, i18n } = useTranslation();
+
   const [isHover, setIsHover] = useState(false);
   const [isPreventHover, setIsPreventHover] = useState(false); // 모바일 mouseover 이벤트 막기
 
@@ -29,13 +32,13 @@ function Passive({caption, passive}) {
                 onTouchEnd={touchSkillIcon}>
               <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${passive.affinity}.webp`} /></S.Icon>
               <S.PassiveText>x{passive.count}</S.PassiveText>
-              <S.PassiveText>{passive.name}</S.PassiveText>
+              <S.PassiveText>{passive.name[i18n.language]}</S.PassiveText>
             </S.PassivesWrap>
           </td>
         </tr>
         <tr>
           <td>
-            {isHover? <SkillEffect effect={passive.desc} support/> : null}
+            {isHover? <SkillEffect effect={passive.desc[i18n.language]} support/> : null}
           </td>
         </tr>
         </tbody>

@@ -3,12 +3,14 @@ import Status from "./Status/Status";
 import Resistances from "./Resistances/Resistances";
 import Skills from "./Skills/Skills";
 import Passive from "./Passive/Passive";
+import {useTranslation} from "react-i18next";
 
 function Character({character}) {
+  const { t, i18n } = useTranslation();
   return (
       <S.Container>
         <S.Information>
-          <S.NameText>{character.identity} {character.name}</S.NameText>
+          <S.NameText>{character.identity[i18n.language]} {(t(`characters.${character.name}`))}</S.NameText>
           {character.rarity === 1 ?
             <S.Icon width="14px" rarity>
               <img src={`${process.env.PUBLIC_URL}/images/icons/rarity/${character.rarity}.webp`}/>
@@ -30,8 +32,8 @@ function Character({character}) {
             <Resistances resistances={character.resistances} />
           </div>
           <Skills skills={character.skills} />
-          <Passive caption="패시브" passive={character.passives[0]} />
-          <Passive caption="서포트 패시브" passive={character.passives[1]} />
+          <Passive caption={t(`captions.passive`)} passive={character.passives[0]} />
+          <Passive caption={t(`captions.support`)} passive={character.passives[1]} />
         </S.TablesWrap>
       </S.Container>
   );

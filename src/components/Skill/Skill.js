@@ -1,17 +1,19 @@
 import * as S from "./styles";
 import {useEffect, useState} from "react";
 import SkillEffect from "../SkillEffect/SkillEffect";
+import {useTranslation} from "react-i18next";
 
-function Skill({skill}) {
+function Skill({skill, defense=false}) {
+  const { t, i18n } = useTranslation();
   const colorTable = {
-    "분노": ["#913326", "#D31917"],
-    "색욕": ["#B44F1E", "#E5E102"],
-    "나태": ["#E49302", "#F8F203"],
-    "탐식": ["#80952D", "#EFEF03"],
-    "우울": ["#3E9CB0", "#01FEFD"],
-    "오만": ["#305E84", "#11CFD9"],
-    "질투": ["#6A4979", "#B903B7"],
     "-": ["#996633", "#120804"],
+    "wrath": ["#913326", "#D31917"],
+    "lust": ["#B44F1E", "#E5E102"],
+    "sloth": ["#E49302", "#F8F203"],
+    "gluttony": ["#80952D", "#EFEF03"],
+    "gloom": ["#3E9CB0", "#01FEFD"],
+    "pride": ["#305E84", "#11CFD9"],
+    "envy": ["#6A4979", "#B903B7"],
   }
 
   const [isHover, setIsHover] = useState(false);
@@ -55,17 +57,21 @@ function Skill({skill}) {
             </S.SkillFrame>
           </S.SkillFrame>
           <S.IconsWrap>
-            <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${skill.type}.webp`} alt={skill.type}/></S.Icon >
+            <S.Icon>
+              <img
+                  src={`${process.env.PUBLIC_URL}/images/icons/${skill.type}.webp`}
+                  alt={skill.type}/>
+            </S.Icon >
             {skill.affinity === '-' ? null : <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${skill.affinity}.webp`} alt={skill.affinity}/></S.Icon>}
           </S.IconsWrap>
-          <S.NameText color={colorTable[skill.affinity][0]}>{skill.name}</S.NameText>
+          <S.NameText color={colorTable[skill.affinity][0]}>{defense?t(`defense.${skill.name}`):skill.name[i18n.language]}</S.NameText>
           <S.CoinsWrap>
             {[...Array(parseInt(skill.power.count))].map((n, idx) => (
                 <S.CoinIcon key={idx}><img src={`${process.env.PUBLIC_URL}/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
             ))}
           </S.CoinsWrap>
         </S.SkillContainer>
-        {isHover ? <SkillEffect effect={skill.desc} /> : null}
+        {isHover ? <SkillEffect name={defense?t(`defense.${skill.name}`):skill.name[i18n.language]} effect={skill.desc[i18n.language]} /> : null}
       </div>
   );
 }
