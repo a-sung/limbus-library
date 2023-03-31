@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components';
 
 export const SkillContainer = styled.div`
+  //width: 83px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +26,7 @@ export const SkillFrame = styled.div`
 `;
 
 export const SkillPowerText = styled.div`
-  font-family: 'S-CoreDream-3Light', sans-serif;
+  font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
 `;
@@ -39,11 +40,29 @@ export const CoinPowerText = styled.div`
 `;
 
 export const NameText = styled.div`
+ 
+  max-width: 100%;
+  
+  // 한 줄 말줄임
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  
+  // 두 줄 말줄임
+  //height: 32px;
+  //text-overflow: ellipsis;
+  //overflow: hidden;
+  //word-break: keep-all;
+  //display: -webkit-box;
+  //-webkit-box-orient: vertical;
+  //-webkit-line-clamp: 2;
+
   margin: 6px 0;
-  padding: 2px 8px;
+  padding: 4px 8px 2px 8px;
   background-color: ${(props) => (props.color ? props.color : "black")};
   box-shadow: -2px 3px black;
-  font-family: 'S-CoreDream-3Light', sans-serif;
+  font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold;
   text-shadow: 1px 1px black;
   word-spacing: -2px;

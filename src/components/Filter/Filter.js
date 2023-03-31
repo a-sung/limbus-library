@@ -1,8 +1,10 @@
 import {useRecoilState} from "recoil";
 import {FilterState} from "store/filterState";
 import * as S from "./styles";
+import {useTranslation} from "react-i18next";
 
 function Filter(props) {
+  const { t } = useTranslation();
   const [filters, setFilters] = useRecoilState(FilterState);
   const handleFilterItems = (e) => {
     if (e.target.id === '') return;
@@ -25,7 +27,7 @@ function Filter(props) {
           {props.items.map(item => (
               <span key={item} onClick={(e) => handleFilterItems(e)}>
                <S.Checkbox label={item} id={item} />
-               <S.Label htmlFor={item}>{item}</S.Label>
+               <S.Label htmlFor={item}>{(t(`${props.category}.${item}`))}</S.Label>
               </span>
           ))}
         </S.LabelWrap>

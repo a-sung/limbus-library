@@ -1,9 +1,9 @@
 import * as S from "./styles";
 
-function SkillEffect({effect}) {
+function SkillEffect({name=null, effect}) {
   return(
       <div>
-        {effect ? <S.Container>{effect}</S.Container> : null}
+        {effect ? <S.Container><S.SKillNameText>{name}</S.SKillNameText>{effect}</S.Container> : null}
       </div>
   )
 }

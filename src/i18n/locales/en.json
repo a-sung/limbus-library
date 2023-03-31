@@ -1,0 +1,66 @@
+{
+  "captions": {
+    "status": "Status",
+    "resistances": "Resistances",
+    "skills": "Skills",
+    "passive": "Passive",
+    "support": "Support"
+  },
+  "resistances": {
+    "ineff": "Ineff.",
+    "normal": "Normal",
+    "fatal": "Fatal"
+  },
+  "defense": {
+    "guard": "Guard",
+    "evade": "Evade",
+    "counter": "Counter"
+  },
+  "filters": {
+    "name": "Character",
+    "type": "Type",
+    "affinity": "Affinity",
+    "keyword": "Keyword"
+  },
+  "characters": {
+    "yisang": "Yi Sang",
+    "faust": "Faust",
+    "donquixote": "Don Quixote",
+    "ryoshu": "Ryōshū",
+    "meursault": "Meursault",
+    "honglu": "Hong Lu",
+    "heathcliff": "Heathcliff",
+    "ishmael": "Ishmael",
+    "rodion": "Rodion",
+    "sinclair": "Emil Sinclair",
+    "outis": "Outis",
+    "gregor": "Gregor"
+  },
+  "types": {
+    "slash": "Slash",
+    "pierce": "Pierce",
+    "blunt": "Blunt"
+  },
+  "affinities": {
+    "wrath": "Wrath",
+    "lust": "Lust",
+    "sloth": "Sloth",
+    "gluttony": "Glut.",
+    "gloom": "Gloom",
+    "pride": "Pride",
+    "envy": "Envy"
+  },
+  "keywords": {
+    "1": "Burn",
+    "2": "Bleed",
+    "3": "Tremor",
+    "4": "Rupture",
+    "5": "Sinking",
+    "6": "Poise",
+    "7": "Charge",
+    "8": "Paralyze",
+    "9": "Fragile",
+    "10": "Bind",
+    "11": "Haste"
+  }
+}

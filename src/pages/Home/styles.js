@@ -12,7 +12,7 @@ export const FilterSection = styled.section`
   gap: 12px;
   padding: 24px 20px;
   border: 2px solid #996633;
-  font-family: 'S-CoreDream-3Light', sans-serif;
+  font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold;
   font-size: 0.9rem;
 `;

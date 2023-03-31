@@ -1,5 +1,6 @@
-export const names = ['이상', '파우스트', '돈키호테', '료슈', '뫼르소', '홍루', '히스클리프', '이스마엘', '로쟈', '싱클레어', '오티스', '그레고르'];
-export const types = ['참격', '관통', '타격'];
-export const rarities = ['0', '00', '000'];
-export const affinities = ['분노', '색욕', '나태', '탐식', '우울', '오만', '질투']
-export const keywords = ['화상', '출혈', '진동', '파열', '침잠', '호흡', '충전', '마비', '취약', '속박', '신속'];
+export const names = ["yisang", "faust", "donquixote", "ryoshu", "meursault", "honglu", "heathcliff", "ishmael", "rodion", "sinclair", "outis", "gregor"];
+export const types = ["slash", "pierce", "blunt"];
+export const affinities = ["wrath", "lust", "sloth", "gluttony", "gloom", "pride", "envy"];
+export const keywords = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+
