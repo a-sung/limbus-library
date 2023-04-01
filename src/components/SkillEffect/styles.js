@@ -15,8 +15,7 @@ export const Container = styled.div`
 `;
 
 export const SKillNameText = styled.div`
-  //font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
-  font-size: 1.2em;
+  font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold;
   margin-bottom: 4px;
 `;
@@ -24,7 +23,6 @@ export const SKillNameText = styled.div`
 export const SkillText = styled.div`
   display: flex;
   gap: 4px;
-  font-family: sans-serif;
   > div:last-child {
     flex-basis: 0;
     flex-grow: 1;
