@@ -21,7 +21,7 @@ function Skill({skill, defense=false}) {
   const [hasEffect, setHasEffect] = useState(false);
 
   useEffect(() => {
-    if (skill.desc) setHasEffect(() => true);
+    if (skill.desc[i18n.language]) setHasEffect(() => true);
   }, [])
 
   const mouseOverSkillIcon = () => {
