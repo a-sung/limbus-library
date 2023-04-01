@@ -12,7 +12,7 @@
     "fatal": "취약"
   },
   "defense": {
-    "guard": "방어",
+    "guard": "가드",
     "evade": "회피",
     "counter": "반격"
   },
@@ -26,7 +26,7 @@
     "yisang": "이상",
     "faust": "파우스트",
     "donquixote": "돈키호테",
-    "ryoshu": "로슈",
+    "ryoshu": "료슈",
     "meursault": "뫼르소",
     "honglu": "홍루",
     "heathcliff": "히스클리프",
