@@ -22,7 +22,7 @@ export const SKillNameText = styled.div`
 
 export const SkillText = styled.div`
   display: flex;
-  gap: 4px;
+  gap: ${props => props.idx === 0 ? null : "4px"};
   > div:last-child {
     flex-basis: 0;
     flex-grow: 1;

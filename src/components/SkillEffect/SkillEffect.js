@@ -20,7 +20,7 @@ function SkillEffect({name=null, effect}) {
               effectDom.map((text, idx) => {
                 if (text)
                   return (
-                    <S.SkillText key={idx}>
+                    <S.SkillText key={idx} idx={idx}>
                       <div>{circleNumber[idx]}</div>
                       <div>{text}</div>
                     </S.SkillText>
