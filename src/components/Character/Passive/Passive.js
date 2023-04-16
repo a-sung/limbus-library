@@ -31,7 +31,7 @@ function Passive({caption, passive}) {
                 onMouseOut={() => setIsHover(false)}
                 onTouchEnd={touchSkillIcon}>
               <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${passive.affinity}.webp`} /></S.Icon>
-              <S.PassiveText>x{passive.count}</S.PassiveText>
+              <S.PassiveText>x{passive.ac}</S.PassiveText>
               <S.PassiveText>{passive.name[i18n.language]}</S.PassiveText>
             </S.PassivesWrap>
           </td>
