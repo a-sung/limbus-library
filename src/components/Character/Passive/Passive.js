@@ -32,6 +32,8 @@ function Passive({caption, passive}) {
                 onTouchEnd={touchSkillIcon}>
               <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${passive.affinity}.webp`} /></S.Icon>
               <S.PassiveText>x{passive.ac}</S.PassiveText>
+              <S.PassiveText>{t(`passive.${passive.type}`)}</S.PassiveText>
+              <S.PassiveText>/</S.PassiveText>
               <S.PassiveText>{passive.name[i18n.language]}</S.PassiveText>
             </S.PassivesWrap>
           </td>
