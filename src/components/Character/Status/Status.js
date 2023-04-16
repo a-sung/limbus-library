@@ -21,7 +21,7 @@ function Status({status}) {
         </thead>
         <tbody>
           <tr>
-            <td>{status.health}</td>
+            <td>{status.hp}</td>
             <td>{status.speed}</td>
             <td>{status.defense}</td>
           </tr>

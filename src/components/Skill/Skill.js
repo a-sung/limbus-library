@@ -42,14 +42,14 @@ function Skill({skill, defense=false}) {
             onMouseOut={() => setIsHover(false)}
             onTouchEnd={touchSkillIcon}
             hover={hasEffect && isHover}>
-          <S.CoinPowerText color={colorTable[skill.affinity][0]}>{skill.power.coin}</S.CoinPowerText>
+          <S.CoinPowerText color={colorTable[skill.affinity][0]}>{skill.cp}</S.CoinPowerText>
           <S.SkillFrame color={colorTable[skill.affinity][1]}>
             <S.SkillFrame width={"51px"} height={"48px"}>
               <S.SkillFrame width={"48px"} height={"46px"} color={colorTable[skill.affinity][0]}>
                 <S.SkillFrame width={"44px"} height={"42px"}>
                   <S.SkillFrame width={"40px"} height={"38px"} color={colorTable[skill.affinity][0]}>
                     <S.SkillFrame width={"38px"} height={"36px"}>
-                      <S.SkillPowerText>{skill.power.skill}</S.SkillPowerText>
+                      <S.SkillPowerText>{skill.sp}</S.SkillPowerText>
                     </S.SkillFrame>
                   </S.SkillFrame>
                 </S.SkillFrame>
@@ -66,7 +66,7 @@ function Skill({skill, defense=false}) {
           </S.IconsWrap>
           <S.NameText color={colorTable[skill.affinity][0]}>{defense?t(`defense.${skill.name}`):skill.name[i18n.language]}</S.NameText>
           <S.CoinsWrap>
-            {[...Array(parseInt(skill.power.count))].map((n, idx) => (
+            {[...Array(parseInt(skill.cc))].map((n, idx) => (
                 <S.CoinIcon key={idx}><img src={`${process.env.PUBLIC_URL}/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
             ))}
           </S.CoinsWrap>

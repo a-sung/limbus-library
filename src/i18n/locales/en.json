@@ -62,5 +62,9 @@
     "9": "Fragile",
     "10": "Bind",
     "11": "Haste"
-  }
+  },
+    "passive": {
+      "res": "res",
+      "owned": "owned"
+    }
 }

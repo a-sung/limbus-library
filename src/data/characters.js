@@ -13,62 +13,72 @@ export async function getCharacters() {
 
   let items = parsed.table.rows
       .map(({ c }) => cleanRow(c))
-      .map(([code, identity_ko, identity_jp, identity_en, name, rarity,
-              health, speed, defense,
-              slash, pierce, blunt,
-              fir_name_ko, fir_name_jp, fir_name_en, fir_type, fir_aff, fir_pow, fir_desc_ko, fir_desc_jp, fir_desc_en,
-              sec_name_ko, sec_name_jp, sec_name_en, sec_type, sec_aff, sec_pow, sec_desc_ko, sec_desc_jp, sec_desc_en,
-              thi_name_ko, thi_name_jp, thi_name_en, thi_type, thi_aff, thi_pow, thi_desc_ko, thi_desc_jp, thi_desc_en,
-              def_type, def_pow, def_aff, def_desc_ko, def_desc_jp, def_desc_en,
-              passive_name_ko, passive_name_jp, passive_name_en, passive_aff, passive_cnt, passive_desc_ko, passive_desc_jp, passive_desc_en,
-              support_name_ko, support_name_jp, support_name_en, support_aff, support_cnt, support_desc_ko, support_desc_jp, support_desc_en]) => ({
+      .map(([code, id_ko, id_jp, id_en, name, rarity, hp, speed, defense, slash, pierce, blunt,
+              s1_name_ko, s1_name_jp, s1_name_en, s1_desc_ko, s1_desc_jp, s1_desc_en, s1_type, s1_attr, s1_cc, s1_sp, s1_cp,
+              s2_name_ko, s2_name_jp, s2_name_en, s2_desc_ko, s2_desc_jp, s2_desc_en, s2_type, s2_attr, s2_cc, s2_sp, s2_cp,
+              s3_name_ko, s3_name_jp, s3_name_en, s3_desc_ko, s3_desc_jp, s3_desc_en, s3_type, s3_attr, s3_cc, s3_sp, s3_cp,
+              d_type, d_attr, d_desc_ko, d_desc_jp, d_desc_en, d_cc, d_sp, d_cp,
+              p_name_ko, p_name_jp, p_name_en, p_desc_ko, p_desc_jp, p_desc_en, p_attr, p_ac, p_type,
+              sp_name_ko, sp_name_jp, sp_name_en, sp_desc_ko, sp_desc_jp, sp_desc_en, sp_attr, sp_ac, sp_type]) => ({
         code,
         rarity,
         name,
-        identity: {
-          ko: identity_ko,
-          jp: identity_jp,
-          en: identity_en,
-        },
-        status:{health, speed, defense},
-        resistances: {slash, pierce, blunt},
+        identity: { ko: id_ko, jp: id_jp, en: id_en },
+        status: { hp, speed, defense },
+        resistances: { slash, pierce, blunt },
         skills: [
           {
-            name: {ko:fir_name_ko, jp: fir_name_jp, en:fir_name_en},
-            type: fir_type,
-            affinity: fir_aff,
-            power: {count: fir_pow.split('/')[0], skill: fir_pow.split('/')[1], coin: fir_pow.split('/')[2]},
-            desc: {ko:fir_desc_ko, jp:fir_desc_jp, en:fir_desc_en}},
+            name: { ko: s1_name_ko, jp: s1_name_jp, en: s1_name_en },
+            desc: { ko: s1_desc_ko, jp: s1_desc_jp, en: s1_desc_en },
+            type: s1_type,
+            affinity: s1_attr,
+            cc: s1_cc,
+            sp: s1_sp,
+            cp: s1_cp
+          },
           {
-            name: {ko:sec_name_ko, jp: sec_name_jp, en:sec_name_en},
-            type: sec_type,
-            affinity: sec_aff,
-            power: {count: sec_pow.split('/')[0], skill: sec_pow.split('/')[1], coin: sec_pow.split('/')[2]},
-            desc: {ko:sec_desc_ko, jp:sec_desc_jp, en:sec_desc_en}},
+            name: { ko: s2_name_ko, jp: s2_name_jp, en: s2_name_en },
+            desc: { ko: s2_desc_ko, jp: s2_desc_jp, en: s2_desc_en },
+            type: s2_type,
+            affinity: s2_attr,
+            cc: s2_cc,
+            sp: s2_sp,
+            cp: s2_cp
+          },
           {
-            name: {ko:thi_name_ko, jp: thi_name_jp, en:thi_name_en},
-            type: thi_type,
-            affinity: thi_aff,
-            power: {count: thi_pow.split('/')[0], skill: thi_pow.split('/')[1], coin: thi_pow.split('/')[2]},
-            desc: {ko:thi_desc_ko, jp:thi_desc_jp, en:thi_desc_en}},
+            name: {ko: s3_name_ko, jp: s3_name_jp, en: s3_name_en},
+            desc: {ko: s3_desc_ko, jp: s3_desc_jp, en: s3_desc_en},
+            type: s3_type,
+            affinity: s3_attr,
+            cc: s3_cc,
+            sp: s3_sp,
+            cp: s3_cp
+          },
           {
-            name: def_type,
-            type: def_type,
-            affinity: def_aff,
-            power: {count: def_pow.split('/')[0], skill: def_pow.split('/')[1],coin: def_pow.split('/')[2]},
-            desc: {ko:def_desc_ko, jp:def_desc_jp, en:def_desc_en}},
+            name: d_type,
+            type: d_type,
+            affinity: d_attr,
+            cc: d_cc,
+            sp: d_sp,
+            cp: d_cp,
+            desc: { ko: d_desc_ko, jp: d_desc_jp, en: d_desc_en }
+          },
         ],
         passives: [
           {
-            name: {ko:passive_name_ko, jp: passive_name_jp, en:passive_name_en},
-            affinity: passive_aff,
-            count: passive_cnt,
-            desc: {ko:passive_desc_ko, jp:passive_desc_jp, en:passive_desc_en}},
+            name: { ko: p_name_ko, jp: p_name_jp, en: p_name_en },
+            desc: { ko: p_desc_ko, jp: p_desc_jp, en: p_desc_en },
+            affinity: p_attr,
+            ac: p_ac,
+            type: p_type,
+          },
           {
-            name: {ko:support_name_ko, jp: support_name_jp, en:support_name_en},
-            affinity: support_aff,
-            count: support_cnt,
-            desc: {ko:support_desc_ko, jp:support_desc_jp, en:support_desc_en}},
+            name: { ko: sp_name_ko, jp: sp_name_jp, en: sp_name_en },
+            desc: { ko: sp_desc_ko, jp: sp_desc_jp, en: sp_desc_en },
+            affinity: sp_attr,
+            ac: sp_ac,
+            type: sp_type
+          }
         ]
       }));
 
