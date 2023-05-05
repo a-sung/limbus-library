@@ -7,12 +7,15 @@ Library of Limbus Componay
 
 ## Release history
 
-최신 버전: v.1.2.2
+최신 버전: v.1.2.3
 
-최종 업데이트: 23.04.29
+최종 업데이트: 23.05.05
 
 <details>
 <summary>업데이트 내역</summary>
+
+- v.1.2.3
+  - N사 돈키호테, 싱클레어 데이터 추가
 
 - v.1.2.2
   - 료.고.파 료슈, 그레고르 데이터 추가
