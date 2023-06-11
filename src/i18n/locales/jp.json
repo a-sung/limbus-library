@@ -63,8 +63,14 @@
     "10": "束縛",
     "11": "クイック"
   },
-    "passive": {
-      "res": "共鳴",
-      "owned": "保有"
-    }
+  "passive": {
+    "res": "共鳴",
+    "owned": "保有"
+  },
+  "season": {
+    "0": "通常",
+    "1": "SEASON 1 - ORIENTATION",
+    "1E": "SEASON 1 - ORIENTATION[EVENT]",
+    "2": "SEASON 2 - REMINISCENCE"
+  }
 }

@@ -63,8 +63,14 @@
     "10": "Bind",
     "11": "Haste"
   },
-    "passive": {
-      "res": "res",
-      "owned": "owned"
-    }
+  "passive": {
+    "res": "res",
+    "owned": "owned"
+  },
+  "season": {
+    "0": "Normal Edition",
+    "1": "SEASON 1 - ORIENTATION",
+    "1E": "SEASON 1 - ORIENTATION[EVENT]",
+    "2": "SEASON 2 - REMINISCENCE"
+  }
 }

@@ -40,6 +40,13 @@ export const NameText = styled.h1`
   margin-bottom: 8px;
 `;
 
+export const SeasonText = styled.h1`
+  color: #E3C290;
+  font-size: 0.8rem;
+  font-family: 'S-CoreDream-3Light', 'M PLUS Rounded 1c', sans-serif;
+  margin-bottom: 8px;
+`;
+
 export const TablesWrap = styled.div`
   > div {
     display: flex;

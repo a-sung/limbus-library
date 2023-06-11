@@ -10,7 +10,10 @@ function Character({character}) {
   return (
       <S.Container>
         <S.Information>
-          <S.NameText>{character.identity[i18n.language]} {(t(`characters.${character.name}`))}</S.NameText>
+          <div>
+            <S.SeasonText>{t(`season.${character.season}`)}</S.SeasonText>
+            <S.NameText>{character.identity[i18n.language]} {(t(`characters.${character.name}`))}</S.NameText>
+          </div>
           {character.rarity === 1 ?
             <S.Icon width="14px" rarity>
               <img src={`${process.env.PUBLIC_URL}/images/icons/rarity/${character.rarity}.webp`}/>

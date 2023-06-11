@@ -13,7 +13,7 @@ export async function getCharacters() {
 
   let items = parsed.table.rows
       .map(({ c }) => cleanRow(c))
-      .map(([code, id_ko, id_jp, id_en, name, rarity, hp, speed, defense, slash, pierce, blunt,
+      .map(([code, id_ko, id_jp, id_en, name, season, rarity, hp, speed, defense, slash, pierce, blunt,
               s1_name_ko, s1_name_jp, s1_name_en, s1_desc_ko, s1_desc_jp, s1_desc_en, s1_type, s1_attr, s1_cc, s1_sp, s1_cp,
               s2_name_ko, s2_name_jp, s2_name_en, s2_desc_ko, s2_desc_jp, s2_desc_en, s2_type, s2_attr, s2_cc, s2_sp, s2_cp,
               s3_name_ko, s3_name_jp, s3_name_en, s3_desc_ko, s3_desc_jp, s3_desc_en, s3_type, s3_attr, s3_cc, s3_sp, s3_cp,
@@ -21,6 +21,7 @@ export async function getCharacters() {
               p_name_ko, p_name_jp, p_name_en, p_desc_ko, p_desc_jp, p_desc_en, p_attr, p_ac, p_type,
               sp_name_ko, sp_name_jp, sp_name_en, sp_desc_ko, sp_desc_jp, sp_desc_en, sp_attr, sp_ac, sp_type]) => ({
         code,
+        season,
         rarity,
         name,
         identity: { ko: id_ko, jp: id_jp, en: id_en },
