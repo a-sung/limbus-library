@@ -7,12 +7,15 @@ Library of Limbus Componay
 
 ## Release history
 
-최신 버전: v.1.2.4
+최신 버전: v.1.3.0
 
 최종 업데이트: 23.06.11
 
 <details>
 <summary>업데이트 내역</summary>
+
+- v.1.3.0
+  - 인격의 시즌 데이터 추가
 
 - v.1.2.4
   - 장미 공방 로쟈, 뫼르소, 그레고르, 여우비 EGO 히스클리프 데이터 추가 
