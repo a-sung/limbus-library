@@ -1,5 +1,5 @@
 import * as S from "../styles";
-import Skill from "components/Skill/Skill";
+import Skill from "containers/Skill/Skill";
 import {useTranslation} from "react-i18next";
 
 function Skills({skills}) {

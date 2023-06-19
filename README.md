@@ -61,7 +61,7 @@ Library of Limbus Componay
 <br>
 
 ## Built with  
-<img src="https://img.shields.io/badge/react-61DAFB?style=flat-square&logo=react&logoColor=black"/> <img src="https://img.shields.io/badge/styled components-DB7093?style=flat-square&logo=styled-components&logoColor=white"/> 
+<img src="https://img.shields.io/badge/react-61DAFB?style=flat-square&logo=react&logoColor=black"/> <img src="https://img.shields.io/badge/styled containers-DB7093?style=flat-square&logo=styled-containers&logoColor=white"/> 
 
  
 # Getting Started with Create React App

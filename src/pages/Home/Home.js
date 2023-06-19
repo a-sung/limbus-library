@@ -1,9 +1,9 @@
 import * as S from "./styles";
 import {useEffect, useState} from "react";
 import {useRecoilState} from "recoil";
-import Header from "components/Header/Header";
-import Filter from "components/Filter/Filter";
-import Character from "components/Character/Character";
+import Header from "containers/Header/Header";
+import Filter from "containers/Filter/Filter";
+import Character from "containers/Character/Character";
 import {FilterState} from "store/filterState";
 import {characters} from "data/characters";
 import { useTranslation } from "react-i18next";
