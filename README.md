@@ -7,12 +7,15 @@ Library of Limbus Componay
 
 ## Release history
 
-최신 버전: v.1.3.0
+최신 버전: v.1.3.1
 
-최종 업데이트: 23.06.11
+최종 업데이트: 23.06.20
 
 <details>
 <summary>업데이트 내역</summary>
+
+- v.1.3.1
+  - 동백 이상, 출렁임 이스마일 데이터 추가
 
 - v.1.3.0
   - 인격의 시즌 데이터 추가
