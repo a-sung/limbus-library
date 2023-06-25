@@ -32,14 +32,14 @@ function Passive({caption, passive}) {
         <tbody>
         <tr>
           <td>
-            <div
+            <S.Passive
                 onMouseOver={mouseOverSkillIcon}
                 onMouseOut={() => setIsHover(false)}
                 onTouchEnd={touchSkillIcon}
                 hover={hasEffect && isHover}>
               <img src={`${process.env.PUBLIC_URL}/images/icons/${passive.affinity}.webp`} />
               <p>x{passive.ac} {t(`passive.${passive.type}`)} / {passive.name[i18n.language]}</p>
-            </div>
+            </S.Passive>
             {isHover? <SkillEffect effect={passive.desc[i18n.language]} support/> : null}
           </td>
         </tr>

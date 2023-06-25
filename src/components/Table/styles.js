@@ -21,14 +21,14 @@ export const Table = styled.table`
     text-align: center;
     box-sizing: border-box;
     background-color: #3C2716;
-    >div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      >img {
-        height: 22px;
-      }
-    }
+   > div {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     >img {
+       height: 22px;
+     }
+   }
   }
   p {
     font-weight: bold;
@@ -40,3 +40,18 @@ export const Table = styled.table`
   }
 `;
 
+export const Passive = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >img {
+    height: 22px;
+  }
+  ${props => props.hover && css`
+    &:hover {
+      border-radius: 4px;
+      background-color: rgba(18, 8, 4, 0.4);
+      cursor: pointer;
+    }
+    `}
+`;

@@ -1,11 +1,12 @@
 import * as S from "./styles";
 import {useEffect, useState} from "react";
-import SkillEffect from "../SkillEffect/SkillEffect";
+import SkillEffect from "components/SkillEffect/SkillEffect";
 import {useTranslation} from "react-i18next";
 
 function Skill({skill, defense=false}) {
   const { t, i18n } = useTranslation();
   const colorTable = {
+    "": ["#996633", "#120804"],
     "-": ["#996633", "#120804"],
     "wrath": ["#913326", "#D31917"],
     "lust": ["#B44F1E", "#E5E102"],
@@ -36,7 +37,7 @@ function Skill({skill, defense=false}) {
   }
 
   return (
-      <div>
+      <>
         <S.SkillContainer
             onMouseOver={mouseOverSkillIcon}
             onMouseOut={() => setIsHover(false)}
@@ -65,14 +66,14 @@ function Skill({skill, defense=false}) {
             {skill.affinity === '-' ? null : <S.Icon><img src={`${process.env.PUBLIC_URL}/images/icons/${skill.affinity}.webp`} alt={skill.affinity}/></S.Icon>}
           </S.IconsWrap>
           <S.NameText color={colorTable[skill.affinity][0]}>{defense?t(`defense.${skill.name}`):skill.name[i18n.language]}</S.NameText>
-          <S.CoinsWrap>
+          <S.IconsWrap>
             {[...Array(parseInt(skill.cc))].map((n, idx) => (
-                <S.CoinIcon key={idx}><img src={`${process.env.PUBLIC_URL}/images/icons/coin.webp`} alt="스킬 보유 코인"/></S.CoinIcon>
+                <img src={`${process.env.PUBLIC_URL}/images/icons/coin.webp`} alt="스킬 보유 코인" key={idx} width="14px"/>
             ))}
-          </S.CoinsWrap>
+          </S.IconsWrap>
         </S.SkillContainer>
         {isHover ? <SkillEffect name={defense?t(`defense.${skill.name}`):skill.name[i18n.language]} effect={skill.desc[i18n.language]} /> : null}
-      </div>
+      </>
   );
 }
 

@@ -1,7 +1,6 @@
 import styled, {css} from 'styled-components';
 
 export const SkillContainer = styled.div`
-  //width: 83px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,23 +39,12 @@ export const CoinPowerText = styled.div`
 `;
 
 export const NameText = styled.div`
- 
   max-width: 100%;
-  
-  // 한 줄 말줄임
+
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   word-break: keep-all;
-  
-  // 두 줄 말줄임
-  //height: 32px;
-  //text-overflow: ellipsis;
-  //overflow: hidden;
-  //word-break: keep-all;
-  //display: -webkit-box;
-  //-webkit-box-orient: vertical;
-  //-webkit-line-clamp: 2;
 
   margin: 6px 0;
   padding: 4px 8px 2px 8px;
@@ -70,7 +58,7 @@ export const NameText = styled.div`
 
 export const IconsWrap = styled.div`
   display: flex;
-  gap: 2px;
+  gap: 1px;
 `;
 
 export const Icon = styled.div`
@@ -80,16 +68,5 @@ export const Icon = styled.div`
   text-align: center;
   > img {
     height: 18px;
-  }
-`;
-
-export const CoinsWrap = styled(IconsWrap)`
-  gap: 0;
-`;
-
-export const CoinIcon = styled(Icon)`
-  width: 14px;
-  > img {
-    height: 12px;
   }
 `;
