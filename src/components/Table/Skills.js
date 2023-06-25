@@ -1,4 +1,4 @@
-import * as S from "../styles";
+import * as S from "./styles";
 import Skill from "containers/Skill/Skill";
 import {useTranslation} from "react-i18next";
 
