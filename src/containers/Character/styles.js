@@ -48,10 +48,9 @@ export const SeasonText = styled.h1`
 `;
 
 export const TablesWrap = styled.div`
-  > div {
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 `;
 
 
@@ -70,6 +69,7 @@ export const Icon = styled.div`
 export const Profile = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 12px;
 `;
 
 export const ProfileTable = styled.div`

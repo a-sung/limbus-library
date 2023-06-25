@@ -1,6 +1,6 @@
 import * as S from "./styles"
 import {useState, useEffect} from "react";
-import SkillEffect from "containers/SkillEffect/SkillEffect";
+import SkillEffect from "components/SkillEffect/SkillEffect";
 import {useTranslation} from "react-i18next";
 
 function Passive({caption, passive}) {
